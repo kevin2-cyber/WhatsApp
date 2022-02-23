@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_clone/constants_theme.dart';
-import 'package:whatsapp_clone/home_screen.dart';
+import 'package:whatsapp_clone/screens/home_screen.dart';
 
 void main() => runApp(const WhatsApp());
 
