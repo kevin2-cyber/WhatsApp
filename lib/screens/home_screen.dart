@@ -16,7 +16,7 @@ class _HomeState extends State<Home> {
         preferredSize: const Size.fromHeight(80.0),
         child: Container(
           padding: const EdgeInsets.only(left: 5),
-          color: Colors.green.shade900,
+          color: Colors.green.shade700,
           child: Column(
             children: [
               const SizedBox(
