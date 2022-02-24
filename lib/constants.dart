@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
 
-class WhatsAppTheme {
+class WhatsAppConstants {
   static const String title = 'WhatsApp';
 }
