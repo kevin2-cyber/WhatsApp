@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
+import './constants.dart' as constants;
 
 class WhatsAppTheme {
   // Fonts
-  final _kTitleFontFamily = GoogleFonts
+  static final _kTitleFontFamily = GoogleFonts
       .montserrat()
       .fontFamily;
   final _kBodyFontFamily = GoogleFonts
@@ -15,178 +15,178 @@ class WhatsAppTheme {
   ThemeData themeData(BuildContext context) =>
       ThemeData(
         platform: TargetPlatform.iOS,
-        selectedRowColor: kSecondaryLightColor,
+        selectedRowColor: constants.WhatsAppConstants.kSecondaryLightColor,
         appBarTheme: appBarTheme,
-        disabledColor: kDisabledColor,
-        errorColor: kErrorLightColor,
-        toggleableActiveColor: kPrimaryColor,
+        disabledColor: constants.WhatsAppConstants.kDisabledColor,
+        errorColor: constants.WhatsAppConstants.kErrorLightColor,
+        toggleableActiveColor: constants.WhatsAppConstants.kPrimaryColor,
         dividerTheme: DividerThemeData(
-          thickness: kSpacingNone,
-          color: kDisabledColor.withOpacity(kOpacityX70),
+          thickness: constants.WhatsAppConstants.kSpacingNone,
+          color: constants.WhatsAppConstants.kDisabledColor.withOpacity(constants.WhatsAppConstants.kOpacityX70),
         ),
         floatingActionButtonTheme: FloatingActionButtonThemeData(
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(kSpacingX16),
+            borderRadius: BorderRadius.circular(constants.WhatsAppConstants.kSpacingX16),
           ),
-          backgroundColor: kSecondaryLightColor,
+          backgroundColor: constants.WhatsAppConstants.kSecondaryLightColor,
         ),
         inputDecorationTheme:
         const InputDecorationTheme(border: UnderlineInputBorder()),
         tabBarTheme: const TabBarTheme(
-          labelColor: kPrimaryColor,
+          labelColor: constants.WhatsAppConstants.kPrimaryColor,
           indicatorSize: TabBarIndicatorSize.label,
-          unselectedLabelColor: kUnselectedLabelColorLight,
+          unselectedLabelColor: constants.WhatsAppConstants.kUnselectedLabelColorLight,
         ),
-        primaryColor: kPrimaryColor,
+        primaryColor: constants.WhatsAppConstants.kPrimaryColor,
         visualDensity: VisualDensity.adaptivePlatformDensity,
-        scaffoldBackgroundColor: kBackgroundLightColor,
-        cardColor: kCardLightColor,
-        backgroundColor: /*Colors.white*/ kBackgroundLightColor,
-        iconTheme: const IconThemeData(color: kPrimaryIconLightColor),
-        primaryIconTheme: const IconThemeData(color: kPrimaryIconLightColor),
+        scaffoldBackgroundColor: constants.WhatsAppConstants.kBackgroundLightColor,
+        cardColor: constants.WhatsAppConstants.kCardLightColor,
+        backgroundColor: /*Colors.white*/ constants.WhatsAppConstants.kBackgroundLightColor,
+        iconTheme: const IconThemeData(color: constants.WhatsAppConstants.kPrimaryIconLightColor),
+        primaryIconTheme: const IconThemeData(color: constants.WhatsAppConstants.kPrimaryIconLightColor),
         textTheme: TextTheme(
           headline1: TextStyle(
               fontFamily: _kTitleFontFamily,
-              color: kTitleTextColorLight,
+              color: constants.WhatsAppConstants.kTitleTextColorLight,
               fontWeight: FontWeight.w600),
           headline2: TextStyle(
               fontFamily: _kTitleFontFamily,
-              color: kTitleTextColorLight,
+              color: constants.WhatsAppConstants.kTitleTextColorLight,
               fontWeight: FontWeight.w600),
           headline3: TextStyle(
               fontFamily: _kTitleFontFamily,
-              color: kTitleTextColorLight,
+              color: constants.WhatsAppConstants.kTitleTextColorLight,
               fontWeight: FontWeight.w600),
           headline4: TextStyle(
               fontFamily: _kTitleFontFamily,
-              color: kTitleTextColorLight,
+              color: constants.WhatsAppConstants.kTitleTextColorLight,
               fontWeight: FontWeight.w600),
           headline5: TextStyle(
-              color: kTitleTextColorLight,
+              color: constants.WhatsAppConstants.kTitleTextColorLight,
               fontFamily: _kBodyFontFamily,
               fontWeight: FontWeight.w600),
           headline6: TextStyle(
-              color: kTitleTextColorLight,
+              color: constants.WhatsAppConstants.kTitleTextColorLight,
               fontFamily: _kBodyFontFamily,
               fontSize: 18,
               fontWeight: FontWeight.w600),
           bodyText1:
-          TextStyle(color: kBodyTextColorLight, fontFamily: _kBodyFontFamily),
+          TextStyle(color: constants.WhatsAppConstants.kBodyTextColorLight, fontFamily: _kBodyFontFamily),
           bodyText2: TextStyle(
-              color: kBodyTextColorLight.withOpacity(kEmphasisMedium),
+              color: constants.WhatsAppConstants.kBodyTextColorLight.withOpacity(constants.WhatsAppConstants.kEmphasisMedium),
               fontFamily: _kBodyFontFamily),
           subtitle1:
-          TextStyle(color: kBodyTextColorLight, fontFamily: _kBodyFontFamily),
+          TextStyle(color: constants.WhatsAppConstants.kBodyTextColorLight, fontFamily: _kBodyFontFamily),
           subtitle2: TextStyle(
-              color: kBodyTextColorLight.withOpacity(kEmphasisMedium),
+              color: constants.WhatsAppConstants.kBodyTextColorLight.withOpacity(constants.WhatsAppConstants.kEmphasisMedium),
               fontFamily: _kBodyFontFamily),
           overline:
-          TextStyle(color: kBodyTextColorLight, fontFamily: _kBodyFontFamily),
+          TextStyle(color: constants.WhatsAppConstants.kBodyTextColorLight, fontFamily: _kBodyFontFamily),
           caption: TextStyle(
-              color: kBodyTextColorLight.withOpacity(kEmphasisMedium),
+              color: constants.WhatsAppConstants.kBodyTextColorLight.withOpacity(constants.WhatsAppConstants.kEmphasisMedium),
               fontFamily: _kBodyFontFamily),
           button: TextStyle(
-              color: kBodyTextColorDark,
+              color: constants.WhatsAppConstants.kBodyTextColorDark,
               fontFamily: _kBodyFontFamily,
               fontWeight: FontWeight.w600),
-        ), colorScheme: ColorScheme.light(
-          secondary: kSecondaryLightColor,
-          onSecondary: kWhiteColor,
-          surface: kWhiteColor,
-          primary: kPrimaryColor,
-          background: kBlackColor,
-        ).copyWith(secondary: kAccentLightColor),
+        ), colorScheme: const ColorScheme.light(
+          secondary: constants.WhatsAppConstants.kSecondaryLightColor,
+          onSecondary: constants.WhatsAppConstants.kWhiteColor,
+          surface: constants.WhatsAppConstants.kWhiteColor,
+          primary: constants.WhatsAppConstants.kPrimaryColor,
+          background: constants.WhatsAppConstants.kBlackColor,
+        ).copyWith(secondary: constants.WhatsAppConstants.kAccentLightColor),
       );
 
   /// Dark theme
   ThemeData darkThemeData(BuildContext context) =>
       ThemeData.dark().copyWith(
         platform: TargetPlatform.iOS,
-        selectedRowColor: kSecondaryDarkColor,
-        errorColor: kErrorDarkColor,
+        selectedRowColor: constants.WhatsAppConstants.kSecondaryDarkColor,
+        errorColor: constants.WhatsAppConstants.kErrorDarkColor,
         appBarTheme: appBarTheme,
-        disabledColor: kCardDarkColor,
-        toggleableActiveColor: kSecondaryDarkColor,
+        disabledColor: constants.WhatsAppConstants.kCardDarkColor,
+        toggleableActiveColor: constants.WhatsAppConstants.kSecondaryDarkColor,
         dividerTheme: DividerThemeData(
           thickness: 1,
-          color: kDisabledColor.withOpacity(kOpacityX70),
+          color: constants.WhatsAppConstants.kDisabledColor.withOpacity(constants.WhatsAppConstants.kOpacityX70),
         ),
         floatingActionButtonTheme: FloatingActionButtonThemeData(
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(kSpacingX16),
+            borderRadius: BorderRadius.circular(constants.WhatsAppConstants.kSpacingX16),
           ),
-          backgroundColor: kPrimaryColorDark,
+          backgroundColor: constants.WhatsAppConstants.kPrimaryColorDark,
         ),
         tabBarTheme: const TabBarTheme(
-          labelColor: kPrimaryColorDark,
+          labelColor: constants.WhatsAppConstants.kPrimaryColorDark,
           indicatorSize: TabBarIndicatorSize.label,
-          unselectedLabelColor: kUnselectedLabelColorDark,
+          unselectedLabelColor: constants.WhatsAppConstants.kUnselectedLabelColorDark,
         ),
         inputDecorationTheme:
         const InputDecorationTheme(border: UnderlineInputBorder()),
         visualDensity: VisualDensity.adaptivePlatformDensity,
-        primaryColor: kPrimaryColorDark,
-        scaffoldBackgroundColor: kBackgroundDarkColor,
-        backgroundColor: kBackgroundDarkColor,
-        iconTheme: const IconThemeData(color: kPrimaryIconDarkColor),
-        primaryIconTheme: const IconThemeData(color: kPrimaryIconDarkColor),
-        cardColor: kCardDarkColor,
+        primaryColor: constants.WhatsAppConstants.kPrimaryColorDark,
+        scaffoldBackgroundColor: constants.WhatsAppConstants.kBackgroundDarkColor,
+        backgroundColor: constants.WhatsAppConstants.kBackgroundDarkColor,
+        iconTheme: const IconThemeData(color: constants.WhatsAppConstants.kPrimaryIconDarkColor),
+        primaryIconTheme: const IconThemeData(color: constants.WhatsAppConstants.kPrimaryIconDarkColor),
+        cardColor: constants.WhatsAppConstants.kCardDarkColor,
         textTheme: TextTheme(
           headline1: TextStyle(
-              color: kTitleTextColorDark,
+              color: constants.WhatsAppConstants.kTitleTextColorDark,
               fontWeight: FontWeight.w600,
               fontFamily: _kTitleFontFamily),
           headline2: TextStyle(
-              color: kTitleTextColorDark,
+              color: constants.WhatsAppConstants.kTitleTextColorDark,
               fontWeight: FontWeight.w600,
               fontFamily: _kTitleFontFamily),
           headline3: TextStyle(
-              color: kTitleTextColorDark,
+              color: constants.WhatsAppConstants.kTitleTextColorDark,
               fontWeight: FontWeight.w600,
               fontFamily: _kTitleFontFamily),
           headline4: TextStyle(
-              color: kTitleTextColorDark,
+              color: constants.WhatsAppConstants.kTitleTextColorDark,
               fontFamily: _kTitleFontFamily,
               fontWeight: FontWeight.w600),
           headline5: TextStyle(
-              color: kTitleTextColorDark,
+              color: constants.WhatsAppConstants.kTitleTextColorDark,
               fontFamily: _kBodyFontFamily,
               fontWeight: FontWeight.w600),
           headline6: TextStyle(
-              color: kTitleTextColorDark,
+              color: constants.WhatsAppConstants.kTitleTextColorDark,
               fontFamily: _kBodyFontFamily,
               fontSize: 18,
               fontWeight: FontWeight.w600),
           bodyText1:
-          TextStyle(color: kBodyTextColorDark, fontFamily: _kBodyFontFamily),
+          TextStyle(color: constants.WhatsAppConstants.kBodyTextColorDark, fontFamily: _kBodyFontFamily),
           bodyText2: TextStyle(
-              color: kBodyTextColorDark.withOpacity(kEmphasisMedium),
+              color: constants.WhatsAppConstants.kBodyTextColorDark.withOpacity(constants.WhatsAppConstants.kEmphasisMedium),
               fontFamily: _kBodyFontFamily),
           subtitle1:
-          TextStyle(color: kBodyTextColorDark, fontFamily: _kBodyFontFamily),
+          TextStyle(color: constants.WhatsAppConstants.kBodyTextColorDark, fontFamily: _kBodyFontFamily),
           subtitle2: TextStyle(
-              color: kBodyTextColorDark.withOpacity(kEmphasisMedium),
+              color: constants.WhatsAppConstants.kBodyTextColorDark.withOpacity(constants.WhatsAppConstants.kEmphasisMedium),
               fontFamily: _kBodyFontFamily),
           overline:
-          TextStyle(color: kBodyTextColorDark, fontFamily: _kBodyFontFamily),
+          TextStyle(color: constants.WhatsAppConstants.kBodyTextColorDark, fontFamily: _kBodyFontFamily),
           caption: TextStyle(
-              color: kBodyTextColorDark.withOpacity(kEmphasisMedium),
+              color: constants.WhatsAppConstants.kBodyTextColorDark.withOpacity(constants.WhatsAppConstants.kEmphasisMedium),
               fontFamily: _kBodyFontFamily),
           button: TextStyle(
-            color: kBodyTextColorLight,
+            color: constants.WhatsAppConstants.kBodyTextColorLight,
             fontFamily: _kBodyFontFamily,
             fontWeight: FontWeight.w600,
           ),
-        ), colorScheme:ColorScheme.dark(
-          secondary: kSecondaryDarkColor,
-          surface: kSurfaceDarkColor,
-          primary: kPrimaryColorDark,
-          background: kBlackColor,
-        ).copyWith(secondary: kAccentDarkColor),
+        ), colorScheme:const ColorScheme.dark(
+          secondary: constants.WhatsAppConstants.kSecondaryDarkColor,
+          surface: constants.WhatsAppConstants.kSurfaceDarkColor,
+          primary: constants.WhatsAppConstants.kPrimaryColorDark,
+          background: constants.WhatsAppConstants.kBlackColor,
+        ).copyWith(secondary: constants.WhatsAppConstants.kAccentDarkColor),
       );
 
   AppBarTheme appBarTheme = AppBarTheme(
-    color: kTransparent,
+    color: constants.WhatsAppConstants.kTransparent,
     centerTitle: true,
     elevation: 0, toolbarTextStyle: TextTheme(
       headline6: TextStyle(
