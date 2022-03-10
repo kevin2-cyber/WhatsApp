@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_clone/constants.dart';
+import 'package:whatsapp_clone/theme.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -16,7 +17,7 @@ class _HomeState extends State<Home> {
         preferredSize: const Size.fromHeight(80.0),
         child: Container(
           padding: const EdgeInsets.only(left: 5),
-          color: Colors.green.shade900,
+          color: WhatsAppTheme.klightAppBarColor,
           child: Column(
             children: [
               const SizedBox(
