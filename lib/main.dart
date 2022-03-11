@@ -12,7 +12,7 @@ class WhatsApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: WhatsAppConstants.title,
-      home: Home(),
+      home: HomeScreen(),
     );
   }
 }
