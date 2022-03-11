@@ -6,5 +6,7 @@ class WhatsAppTheme {
   static const kdarkThemeColor = Color(0xFF121B22);
   static const klightThemeColor = Colors.white;
   static const klightAppBarColor = Color(0xFF008069);
+  static const kdarkTextThemeColor = Color(0xFF818E96);
+  static const klightTextThemeColor = Color(0xFFDFEBF1);
   TextStyle textHeading1 = GoogleFonts.poppins();
 }

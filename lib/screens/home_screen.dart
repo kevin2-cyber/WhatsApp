@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:whatsapp_clone/constants.dart';
+import 'package:whatsapp_clone/screens/call_screen.dart';
 import 'package:whatsapp_clone/theme.dart';
 
 class Home extends StatefulWidget {
@@ -14,10 +16,10 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(80.0),
+        preferredSize: const Size.fromHeight(90.0),
         child: Container(
           padding: const EdgeInsets.only(left: 5),
-          color: WhatsAppTheme.klightAppBarColor,
+          color: WhatsAppTheme.kdarkAppBarColor,
           child: Column(
             children: [
               const SizedBox(
@@ -30,7 +32,10 @@ class _HomeState extends State<Home> {
                     children:[
                       Text(
                           WhatsAppConstants.title,
-                        style: Theme.of(context).textTheme.headline5,
+                        style: GoogleFonts.poppins(
+                          textStyle: Theme.of(context).textTheme.headline6,
+                          color: WhatsAppTheme.kdarkTextThemeColor,
+                        ),
                       ),
                     ],
                   ),
@@ -38,9 +43,11 @@ class _HomeState extends State<Home> {
                     children: const [
                       Icon(
                         Icons.search,
+                        color: WhatsAppTheme.kdarkTextThemeColor,
                       ),
                       Icon(
                         Icons.more_vert,
+                        color: WhatsAppTheme.kdarkTextThemeColor,
                       ),
                     ],
                   ),
@@ -51,11 +58,40 @@ class _HomeState extends State<Home> {
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: const [
+                children: [
                   // Icon(Icons.camera_alt),
-                  Text('Chats'),
-                  Text('Status'),
-                  Text('Calls'),
+                  GestureDetector(
+                      child: Text(
+                          'Chats',
+                        style: GoogleFonts.poppins(
+                          textStyle: Theme.of(context).textTheme.headline6,
+                          color: WhatsAppTheme.kdarkTextThemeColor,
+                        ),
+                      ),
+                  ),
+                  GestureDetector(
+                      child: Text(
+                          'Status',
+                        style: GoogleFonts.poppins(
+                          textStyle: Theme.of(context).textTheme.headline6,
+                          color: WhatsAppTheme.kdarkTextThemeColor,
+                        ),
+                      ),
+                  ),
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const CallScreen()));
+                    },
+                    child: Text(
+                        'Calls',
+                      style: GoogleFonts.poppins(
+                        textStyle: Theme.of(context).textTheme.headline6,
+                        color: WhatsAppTheme.kdarkTextThemeColor,
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ],
