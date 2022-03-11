@@ -14,7 +14,11 @@ class BaseAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return AppBar(
+      title: title,
+      backgroundColor: bgColor,
+      actions: widgets,
+    );
   }
 
   @override
