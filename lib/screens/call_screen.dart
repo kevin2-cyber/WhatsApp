@@ -5,9 +5,12 @@ class CallScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: MediaQuery.of(context).size.height / 4,
-      color: Colors.green,
+    return Scaffold(
+      body: Container(
+        // height: MediaQuery.of(context).size.height,
+       // width: 200,
+        // color: Colors.green,
+      ),
     );
   }
 }

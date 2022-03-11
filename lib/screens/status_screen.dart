@@ -5,8 +5,10 @@ class StatusScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.grey,
+    return Scaffold(
+      body: Container(
+        color: Colors.grey,
+      ),
     );
   }
 }

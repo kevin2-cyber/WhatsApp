@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:whatsapp_clone/constants.dart';
+import 'package:whatsapp_clone/constants-and-themes/constants.dart';
 import 'package:whatsapp_clone/screens/call_screen.dart';
-import 'package:whatsapp_clone/theme.dart';
+import 'package:whatsapp_clone/constants-and-themes/theme.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -16,9 +16,9 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(90.0),
+        preferredSize: const Size.fromHeight(100.0),
         child: Container(
-          padding: const EdgeInsets.only(left: 5),
+          padding: const EdgeInsets.only(left: 5, top: 43),
           color: WhatsAppTheme.kdarkAppBarColor,
           child: Column(
             children: [
