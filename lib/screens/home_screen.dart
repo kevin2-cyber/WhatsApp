@@ -3,6 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:whatsapp_clone/constants-and-themes/constants.dart';
 import 'package:whatsapp_clone/screens/call_screen.dart';
 import 'package:whatsapp_clone/constants-and-themes/theme.dart';
+import 'package:whatsapp_clone/screens/chat_screen.dart';
+import 'package:whatsapp_clone/screens/status_screen.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -61,6 +63,11 @@ class _HomeState extends State<Home> {
                 children: [
                   // Icon(Icons.camera_alt),
                   GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const ChatScreen()));
+                    },
                       child: Text(
                           'Chats',
                         style: GoogleFonts.poppins(
@@ -70,6 +77,11 @@ class _HomeState extends State<Home> {
                       ),
                   ),
                   GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const StatusScreen()));
+                    },
                       child: Text(
                           'Status',
                         style: GoogleFonts.poppins(
