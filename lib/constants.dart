@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_icons/flutter_icons.dart';
+// import 'package:flutter_icons/flutter_icons.dart';
 
 import 'core/size_config.dart';
 
@@ -121,7 +121,7 @@ class WhatsAppConstants {
   static const kTestDuration = Duration(milliseconds: 1500);
 
   /// Others
-  static const kScrollPhysics = const BouncingScrollPhysics();
+  static const kScrollPhysics = BouncingScrollPhysics();
   static const kSlideOffset = 50.0;
 
   /// Colors
