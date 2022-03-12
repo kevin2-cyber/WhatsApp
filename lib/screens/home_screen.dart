@@ -1,12 +1,16 @@
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:whatsapp_clone/constants-and-themes/constants.dart';
 import 'package:whatsapp_clone/screens/call_screen.dart';
 import 'package:whatsapp_clone/constants-and-themes/theme.dart';
 import 'package:whatsapp_clone/screens/chat_screen.dart';
+import 'package:whatsapp_clone/screens/status_screen.dart';*/
+import 'package:flutter/material.dart';
+import 'package:whatsapp_clone/screens/call_screen.dart';
+import 'package:whatsapp_clone/screens/chat_screen.dart';
 import 'package:whatsapp_clone/screens/status_screen.dart';
 
-class Home extends StatefulWidget {
+/*class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
 
   @override
@@ -110,6 +114,42 @@ class _HomeState extends State<Home> {
           ),
         ),
       ),
+    );
+  }
+}
+*/
+
+
+
+class TabBarDemo extends StatelessWidget {
+  const TabBarDemo({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+          appBar: AppBar(
+            bottom: const TabBar(
+              tabs: [
+                Tab(
+                  text: 'Chats',
+                ),
+                Tab(
+                  text: 'Status',
+                ),
+                Tab(
+                  text: 'Calls',
+                ),
+              ],
+            ),
+            title: const Text('Tabs Demo'),
+          ),
+          body: const TabBarView(
+            children: [
+              ChatScreen(),
+              StatusScreen(),
+              CallScreen(),
+            ],
+          ),
     );
   }
 }

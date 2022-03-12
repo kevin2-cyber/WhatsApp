@@ -14,7 +14,10 @@ class WhatsApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: WhatsAppConstants.themeData,
       title: WhatsAppConstants.title,
-      home: const Home(),
+      home: const DefaultTabController(
+        length: 3,
+        child: TabBarDemo(),
+      ),
     );
   }
 }
