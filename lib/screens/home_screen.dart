@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:whatsapp_clone/constants-and-themes/constants.dart';
 import 'package:whatsapp_clone/constants-and-themes/theme.dart';
-import 'package:whatsapp_clone/main.dart';
+// import 'package:whatsapp_clone/main.dart';
 import 'package:whatsapp_clone/screens/call_screen.dart';
 import 'package:whatsapp_clone/screens/chat_screen.dart';
 import 'package:whatsapp_clone/screens/status_screen.dart';
