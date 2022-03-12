@@ -1,2 +1,2 @@
 # WhatsApp
-WhatsApp clone using flutter framework
+WhatsApp UI clone using flutter framework
