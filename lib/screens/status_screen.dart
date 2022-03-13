@@ -6,28 +6,26 @@ class StatusScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Stack(
-        children: [
-          Positioned(
-            top: 489,
-            left: 439,
-            child: Container(
-              height: 40,
-              width: 40,
-              child: FloatingActionButton(
-                backgroundColor: WhatsAppTheme.kdarkAppBarColor,
-                onPressed: () {},
-                child: const Icon(
-                  Icons.edit,
-                  color: Colors.white,
-                  size: 20.0,
-                ),
+    return Stack(
+      children: [
+        Positioned(
+          top: 489,
+          left: 439,
+          child: SizedBox(
+            height: 40,
+            width: 40,
+            child: FloatingActionButton(
+              backgroundColor: WhatsAppTheme.kdarkAppBarColor,
+              onPressed: () {},
+              child: const Icon(
+                Icons.edit,
+                color: Colors.white,
+                size: 20.0,
               ),
             ),
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }
