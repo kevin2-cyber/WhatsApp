@@ -9,8 +9,8 @@ class StatusScreen extends StatelessWidget {
     return Stack(
       children: [
         Positioned(
-          top: 489,
-          left: 439,
+          top: 620,
+          left: 350,
           child: SizedBox(
             height: 40,
             width: 40,
