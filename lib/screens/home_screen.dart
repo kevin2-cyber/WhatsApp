@@ -60,6 +60,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                 'CHATS',
                 style: GoogleFonts.poppins(
                   color: WhatsAppTheme.kdarkTextThemeColor,
+                  fontWeight: FontWeight.w500,
                 ),
               ),
             ),
@@ -68,6 +69,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                 'STATUS',
                 style: GoogleFonts.poppins(
                   color: WhatsAppTheme.kdarkTextThemeColor,
+                  fontWeight: FontWeight.w500,
                 ),
               ),
             ),
@@ -76,6 +78,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                 'CALLS',
                 style: GoogleFonts.poppins(
                   color: WhatsAppTheme.kdarkTextThemeColor,
+                  fontWeight: FontWeight.w500,
                 ),
               ),
             ),
