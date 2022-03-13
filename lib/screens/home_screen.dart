@@ -12,7 +12,27 @@ class Home extends StatefulWidget {
   State<Home> createState() => _HomeState();
 }
 
-class _HomeState extends State<Home> {
+class _HomeState extends State<Home>
+with SingleTickerProviderStateMixin{
+  late TabController _tabController;
+
+  @override
+  void initState() {
+    super.initState();
+    _tabController = TabController(length: 3, vsync: this, initialIndex: 0);
+    _tabController.addListener(_handleTabIndex);
+  }
+
+  @override
+  void dispose() {
+    _tabController.removeListener(_handleTabIndex);
+    _tabController.dispose();
+    super.dispose();
+  }
+
+  void _handleTabIndex() {
+    setState(() {});
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,6 +49,7 @@ class _HomeState extends State<Home> {
             ],
             backgroundColor: WhatsAppTheme.kdarkAppBarColor,
             bottom: TabBar(
+              controller: _tabController,
               tabs: [
                 Tab(
                   child: Text(
@@ -63,13 +84,46 @@ class _HomeState extends State<Home> {
               ),
             ),
           ),
-          body: const TabBarView(
-            children: [
+          body: TabBarView(
+            controller: _tabController,
+            children: const [
               ChatScreen(),
               StatusScreen(),
               CallScreen(),
             ],
           ),
+      floatingActionButton: _bottomButtons(),
+    );
+  }
+  Widget _bottomButtons() {
+    return _tabController.index == 0
+        ? FloatingActionButton(
+        shape: const StadiumBorder(),
+        onPressed: (){},
+        backgroundColor: WhatsAppTheme.kfabColor,
+        child: const Icon(
+          Icons.message,
+          size: 20.0,
+          color: Colors.white,
+        ))
+         ? _tabController.index == 1
+        ? FloatingActionButton(
+      shape: const StadiumBorder(),
+      onPressed: () {},
+      backgroundColor: WhatsAppTheme.kfabColor,
+      child: const Icon(
+        Icons.edit,
+        size: 20.0,
+        color: Colors.white,
+      ))
+    : FloatingActionButton(
+    shape: const StadiumBorder(),
+    onPressed: () {},
+    backgroundColor: Colors.redAccent,
+    child: const Icon(
+    Icons.height,
+    size: 20.0,
+    ),
     );
   }
 }
