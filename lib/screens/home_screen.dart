@@ -3,8 +3,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:whatsapp_clone/constants-and-themes/constants_themes.dart';
 import 'package:whatsapp_clone/screens/screens.dart';
 
-
-
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
 
@@ -12,8 +10,7 @@ class Home extends StatefulWidget {
   State<Home> createState() => _HomeState();
 }
 
-class _HomeState extends State<Home>
-with SingleTickerProviderStateMixin{
+class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   late TabController _tabController;
 
   @override
@@ -33,104 +30,106 @@ with SingleTickerProviderStateMixin{
   void _handleTabIndex() {
     setState(() {});
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-          appBar: AppBar(
-            actions:<Widget>[
-              IconButton(
-                color: WhatsAppTheme.kdarkTextThemeColor,
-                onPressed: () {  },
-                icon: const Icon(
-                  Icons.search,
-                ),
-              ),
-              IconButton(
-                icon: const Icon(
-                    Icons.more_vert,
-                ),
-                onPressed: () {},
-                color: WhatsAppTheme.kdarkTextThemeColor,
-              ),
-            ],
-            backgroundColor: WhatsAppTheme.kdarkAppBarColor,
-            bottom: TabBar(
-              controller: _tabController,
-              tabs: [
-                Tab(
-                  child: Text(
-                      'Chats',
-                    style: GoogleFonts.poppins(
-                      color: WhatsAppTheme.kdarkTextThemeColor,
-                    ),
-                  ),
-                ),
-                Tab(
-                  child: Text(
-                      'Status',
-                    style: GoogleFonts.poppins(
-                      color: WhatsAppTheme.kdarkTextThemeColor,
-                    ),
-                  ),
-                ),
-                Tab(
-                  child: Text(
-                    'Calls',
-                    style: GoogleFonts.poppins(
-                      color: WhatsAppTheme.kdarkTextThemeColor,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            title: Text(
-              WhatsAppConstants.title,
-              style: GoogleFonts.poppins(
-                color: WhatsAppTheme.kdarkTextThemeColor,
-              ),
+      appBar: AppBar(
+        actions: <Widget>[
+          IconButton(
+            color: WhatsAppTheme.kdarkTextThemeColor,
+            onPressed: () {},
+            icon: const Icon(
+              Icons.search,
             ),
           ),
-          body: TabBarView(
-            controller: _tabController,
-            children: const [
-              ChatScreen(),
-              StatusScreen(),
-              CallScreen(),
-            ],
+          IconButton(
+            icon: const Icon(
+              Icons.more_vert,
+            ),
+            onPressed: () {},
+            color: WhatsAppTheme.kdarkTextThemeColor,
           ),
+        ],
+        backgroundColor: WhatsAppTheme.kdarkAppBarColor,
+        bottom: TabBar(
+          controller: _tabController,
+          tabs: [
+            Tab(
+              child: Text(
+                'CHATS',
+                style: GoogleFonts.poppins(
+                  color: WhatsAppTheme.kdarkTextThemeColor,
+                ),
+              ),
+            ),
+            Tab(
+              child: Text(
+                'STATUS',
+                style: GoogleFonts.poppins(
+                  color: WhatsAppTheme.kdarkTextThemeColor,
+                ),
+              ),
+            ),
+            Tab(
+              child: Text(
+                'CALLS',
+                style: GoogleFonts.poppins(
+                  color: WhatsAppTheme.kdarkTextThemeColor,
+                ),
+              ),
+            ),
+          ],
+        ),
+        title: Text(
+          WhatsAppConstants.title,
+          style: GoogleFonts.poppins(
+            color: WhatsAppTheme.kdarkTextThemeColor,
+          ),
+        ),
+      ),
+      body: TabBarView(
+        controller: _tabController,
+        children: const [
+          ChatScreen(),
+          StatusScreen(),
+          CallScreen(),
+        ],
+      ),
       floatingActionButton: _bottomButtons(),
     );
   }
+
   Widget _bottomButtons() {
     return _tabController.index == 0
         ? FloatingActionButton(
-        shape: const StadiumBorder(),
-        onPressed: (){},
-        backgroundColor: WhatsAppTheme.kfabColor,
-        child: const Icon(
-          Icons.message,
-          size: 20.0,
-          color: Colors.white,
-        ))
-         : _tabController.index == 1
-        ? FloatingActionButton(
-      shape: const StadiumBorder(),
-      onPressed: () {},
-      backgroundColor: WhatsAppTheme.kfabColor,
-      child: const Icon(
-        Icons.camera_alt,
-        size: 20.0,
-        color: Colors.white,
-      ))
-    : FloatingActionButton(
-    shape: const StadiumBorder(),
-    onPressed: () {},
-    backgroundColor: WhatsAppTheme.kfabColor,
-    child: const Icon(
-    Icons.add_call,
-    size: 20.0,
-      color: Colors.white,
-    ),
-    );
+            shape: const StadiumBorder(),
+            onPressed: () {},
+            backgroundColor: WhatsAppTheme.kfabColor,
+            child: const Icon(
+              Icons.message,
+              size: 20.0,
+              color: Colors.white,
+            ))
+        : _tabController.index == 1
+            ? FloatingActionButton(
+                shape: const StadiumBorder(),
+                onPressed: () {},
+                backgroundColor: WhatsAppTheme.kfabColor,
+                child: const Icon(
+                  Icons.camera_alt,
+                  size: 20.0,
+                  color: Colors.white,
+                ))
+            : FloatingActionButton(
+                shape: const StadiumBorder(),
+                onPressed: () {},
+                backgroundColor: WhatsAppTheme.kfabColor,
+                child: const Icon(
+                  Icons.add_call,
+                  size: 20.0,
+                  color: Colors.white,
+                ),
+              );
   }
 }
