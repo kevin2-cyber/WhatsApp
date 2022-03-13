@@ -118,7 +118,7 @@ with SingleTickerProviderStateMixin{
       onPressed: () {},
       backgroundColor: WhatsAppTheme.kfabColor,
       child: const Icon(
-        Icons.edit,
+        Icons.camera_alt,
         size: 20.0,
         color: Colors.white,
       ))
