@@ -6,7 +6,16 @@ class StatusScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        color: Colors.grey,
+        child: Stack(
+          children: [
+            FloatingActionButton(
+            onPressed: () {  },
+            child: const Icon(
+              Icons.add,
+            ),
+          ),
+    ],
+        ),
     );
   }
 }
