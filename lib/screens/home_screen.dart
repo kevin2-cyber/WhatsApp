@@ -37,13 +37,19 @@ with SingleTickerProviderStateMixin{
   Widget build(BuildContext context) {
     return Scaffold(
           appBar: AppBar(
-            actions: const <Icon>[
-              Icon(
-                  Icons.search,
+            actions:<Widget>[
+              IconButton(
                 color: WhatsAppTheme.kdarkTextThemeColor,
+                onPressed: () {  },
+                icon: const Icon(
+                  Icons.search,
+                ),
               ),
-              Icon(
-                  Icons.more_vert,
+              IconButton(
+                icon: const Icon(
+                    Icons.more_vert,
+                ),
+                onPressed: () {},
                 color: WhatsAppTheme.kdarkTextThemeColor,
               ),
             ],
@@ -106,7 +112,7 @@ with SingleTickerProviderStateMixin{
           size: 20.0,
           color: Colors.white,
         ))
-         ? _tabController.index == 1
+         : _tabController.index == 1
         ? FloatingActionButton(
       shape: const StadiumBorder(),
       onPressed: () {},
@@ -119,10 +125,11 @@ with SingleTickerProviderStateMixin{
     : FloatingActionButton(
     shape: const StadiumBorder(),
     onPressed: () {},
-    backgroundColor: Colors.redAccent,
+    backgroundColor: WhatsAppTheme.kfabColor,
     child: const Icon(
-    Icons.height,
+    Icons.add_call,
     size: 20.0,
+      color: Colors.white,
     ),
     );
   }
