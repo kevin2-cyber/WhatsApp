@@ -5,7 +5,6 @@ class ChatScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var hello = 'Hello world';
     return Container(
 
     );
