@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/constants-and-themes/theme.dart';
+
+import 'constants_themes.dart';
 
 class WhatsAppConstants {
   /*double sizes(BuildContext context) {
