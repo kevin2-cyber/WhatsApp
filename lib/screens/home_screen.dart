@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:whatsapp_clone/screens/camera_screen.dart';
 import 'package:whatsapp_clone/screens/screens.dart';
 
 import '../core/constants-and-themes/constants_themes.dart';
@@ -17,7 +18,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: 3, vsync: this, initialIndex: 0);
+    _tabController = TabController(length: 4, vsync: this, initialIndex: 0);
     _tabController.addListener(_handleTabIndex);
   }
 
@@ -56,6 +57,14 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
         bottom: TabBar(
           controller: _tabController,
           tabs: [
+            const Tab(
+              child: SizedBox(
+                width: 30,
+                child: Icon(
+                  Icons.camera_alt,
+                ),
+              ),
+            ),
             Tab(
               child: Text(
                 'CHATS',
@@ -95,6 +104,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
       body: TabBarView(
         controller: _tabController,
         children: const [
+          CameraScreen(),
           ChatScreen(),
           StatusScreen(),
           CallScreen(),
@@ -105,7 +115,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   }
 
   Widget _bottomButtons() {
-    return _tabController.index == 0
+    return _tabController.index == 1
         ? FloatingActionButton(
             shape: const StadiumBorder(),
             onPressed: () {},
@@ -115,7 +125,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
               size: 20.0,
               color: Colors.white,
             ))
-        : _tabController.index == 1
+        : _tabController.index == 2
             ? FloatingActionButton(
                 shape: const StadiumBorder(),
                 onPressed: () {},
