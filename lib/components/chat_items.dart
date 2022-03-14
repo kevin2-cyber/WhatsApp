@@ -1,9 +1,9 @@
 class ChatItems {
-  String imageurl;
+  String imageUrl;
   String userName;
 
   ChatItems ({
-    required this.imageurl,
+    required this.imageUrl,
     required this.userName,
 });
 }
