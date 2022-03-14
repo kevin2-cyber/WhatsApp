@@ -7,7 +7,7 @@ class ChatScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     var hello = 'Hello world';
     return Container(
-        child: Text('$hello'),
+
     );
   }
 }
