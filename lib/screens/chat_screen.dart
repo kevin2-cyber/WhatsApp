@@ -12,9 +12,9 @@ class ChatScreen extends StatelessWidget {
       child: ListView.builder(
         itemCount: profiles?.profiles.length,
           itemBuilder: (context, index) {
-          return profiles
+          return profiles;
           }
-      )),;
+      )
     );
   }
 }
