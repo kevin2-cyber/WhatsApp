@@ -8,13 +8,11 @@ class ChatScreen extends StatelessWidget {
   Widget build(BuildContext context) {
 
     Profiles? profiles;
-    return Container(
-      child: ListView.builder(
-        itemCount: profiles?.profiles.length,
-          itemBuilder: (context, index) {
-          return profiles;
-          }
-      )
+    return ListView.builder(
+      itemCount: profiles?.profiles.length,
+        itemBuilder: (context, index) {
+        return profiles;
+        }
     );
   }
 }
