@@ -7,14 +7,17 @@ class ChatScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    Profiles? profiles;
+    // Profiles? profiles;
     return Container(
-      child: ListView.builder(
-        itemCount: profiles?.profiles.length,
-          itemBuilder: (context, index) {
-          return profiles;
-          }
-      )
+
     );
   }
 }
+
+
+// child: ListView.builder(
+// itemCount: profiles?.profiles.length,
+// itemBuilder: (context, index) {
+// return profiles;
+// }
+// )
