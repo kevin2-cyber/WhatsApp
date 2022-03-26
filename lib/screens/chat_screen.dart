@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-// import 'package:whatsapp_clone/components/profile_entity.dart';
+
 
 class ChatScreen extends StatelessWidget {
   const ChatScreen({Key? key}) : super(key: key);
@@ -9,6 +9,8 @@ class ChatScreen extends StatelessWidget {
     return Container(
       child: ListView.builder(itemBuilder: ((context, index) => )),
     );
+    return Container();
+
   }
 }
 
