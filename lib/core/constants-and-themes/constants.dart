@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'constants_themes.dart';
 
 class WhatsAppConstants {
   static const kdarkAppBarColor = Color(0xFF1F2C34);
