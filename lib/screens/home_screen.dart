@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:whatsapp_clone/screens/camera_screen.dart';
 import 'package:whatsapp_clone/screens/screens.dart';
-
 import '../core/constants-and-themes/constants_themes.dart';
 
 class Home extends StatefulWidget {
@@ -18,7 +17,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: 4, vsync: this, initialIndex: 0);
+    _tabController = TabController(length: 3, vsync: this, initialIndex: 0);
     _tabController.addListener(_handleTabIndex);
   }
 
@@ -57,14 +56,14 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
         bottom: TabBar(
           controller: _tabController,
           tabs: [
-            const Tab(
-              child: SizedBox(
-                width: 30,
-                child: Icon(
-                  Icons.camera_alt,
-                ),
-              ),
-            ),
+            // const Tab(
+            //   child: SizedBox(
+            //     width: 30,
+            //     child: Icon(
+            //       Icons.camera_alt,
+            //     ),
+            //   ),
+            // ),
             Tab(
               child: Text(
                 'CHATS',
