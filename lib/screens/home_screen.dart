@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:whatsapp_clone/screens/screens.dart';
-import '../core/constants-and-themes/constants_themes.dart';
+import '../core/theme/theme.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -37,7 +37,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
       appBar: AppBar(
         actions: <Widget>[
           IconButton(
-            color: WhatsAppTheme.kdarkTextThemeColor,
+            color: WhatsAppConstants.kdarkTextThemeColor,
             onPressed: () {},
             icon: const Icon(
               Icons.search,
@@ -48,10 +48,10 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
               Icons.more_vert,
             ),
             onPressed: () {},
-            color: WhatsAppTheme.kdarkTextThemeColor,
+            color: WhatsAppConstants.kdarkTextThemeColor,
           ),
         ],
-        backgroundColor: WhatsAppTheme.kdarkAppBarColor,
+        backgroundColor: WhatsAppConstants.kdarkAppBarColor,
         bottom: TabBar(
           controller: _tabController,
           tabs: [
@@ -67,7 +67,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
               child: Text(
                 'CHATS',
                 style: GoogleFonts.poppins(
-                  color: WhatsAppTheme.kdarkTextThemeColor,
+                  color: WhatsAppConstants.kdarkTextThemeColor,
                   fontWeight: FontWeight.w500,
                 ),
               ),
@@ -76,7 +76,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
               child: Text(
                 'STATUS',
                 style: GoogleFonts.poppins(
-                  color: WhatsAppTheme.kdarkTextThemeColor,
+                  color: WhatsAppConstants.kdarkTextThemeColor,
                   fontWeight: FontWeight.w500,
                 ),
               ),
@@ -85,7 +85,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
               child: Text(
                 'CALLS',
                 style: GoogleFonts.poppins(
-                  color: WhatsAppTheme.kdarkTextThemeColor,
+                  color: WhatsAppConstants.kdarkTextThemeColor,
                   fontWeight: FontWeight.w500,
                 ),
               ),
@@ -95,7 +95,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
         title: Text(
           WhatsAppConstants.title,
           style: GoogleFonts.poppins(
-            color: WhatsAppTheme.kdarkTextThemeColor,
+            color: WhatsAppConstants.kdarkTextThemeColor,
           ),
         ),
       ),
@@ -117,7 +117,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
         ? FloatingActionButton(
             shape: const StadiumBorder(),
             onPressed: () {},
-            backgroundColor: WhatsAppTheme.kfabColor,
+            backgroundColor: WhatsAppConstants.kfabColor,
             child: const Icon(
               Icons.message,
               size: 20.0,
@@ -127,7 +127,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
             ? FloatingActionButton(
                 shape: const StadiumBorder(),
                 onPressed: () {},
-                backgroundColor: WhatsAppTheme.kfabColor,
+                backgroundColor: WhatsAppConstants.kfabColor,
                 child: const Icon(
                   Icons.camera_alt,
                   size: 20.0,
@@ -136,7 +136,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
             : FloatingActionButton(
                 shape: const StadiumBorder(),
                 onPressed: () {},
-                backgroundColor: WhatsAppTheme.kfabColor,
+                backgroundColor: WhatsAppConstants.kfabColor,
                 child: const Icon(
                   Icons.add_call,
                   size: 20.0,
