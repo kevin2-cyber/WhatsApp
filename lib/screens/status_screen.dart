@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../core/constants-and-themes/theme.dart';
+import '../core/theme/theme.dart';
 
 class StatusScreen extends StatelessWidget {
   const StatusScreen({Key? key}) : super(key: key);
