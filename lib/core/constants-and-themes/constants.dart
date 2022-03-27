@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 
-import 'constants_themes.dart';
-
 class WhatsAppConstants {
-  /*double sizes(BuildContext context) {
-    double size = MediaQuery.of(context).size as double;
-    return size;
-  }*/
+  static const kdarkAppBarColor = Color(0xFF1F2C34);
+  static const kdarkThemeColor = Color(0xFF121B22);
+  static const klightThemeColor = Colors.white;
+  static const klightAppBarColor = Color(0xFF008069);
+  static const kdarkTextThemeColor = Color(0xFF818E96);
+  static const klightTextThemeColor = Color(0xFFDFEBF1);
+  static const kfabColor = Color(0xFF00A884);
   static const String title = 'WhatsApp';
-  static final ThemeData themeData = ThemeData.dark().copyWith(
-    scaffoldBackgroundColor: WhatsAppTheme.kdarkThemeColor,
-  );
 }
