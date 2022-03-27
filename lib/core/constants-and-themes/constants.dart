@@ -9,7 +9,4 @@ class WhatsAppConstants {
   static const klightTextThemeColor = Color(0xFFDFEBF1);
   static const kfabColor = Color(0xFF00A884);
   static const String title = 'WhatsApp';
-  static final ThemeData themeData = ThemeData.dark().copyWith(
-    scaffoldBackgroundColor: kdarkThemeColor,
-  );
 }
