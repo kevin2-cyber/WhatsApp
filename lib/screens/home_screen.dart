@@ -103,7 +103,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
       body: TabBarView(
         controller: _tabController,
         children: const [
-          CameraScreen(),
+          // CameraScreen(),
           ChatScreen(),
           StatusScreen(),
           CallScreen(),
