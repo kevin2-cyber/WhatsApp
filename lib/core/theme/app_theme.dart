@@ -10,27 +10,27 @@ class WhatsAppTheme {
     bodyText1: GoogleFonts.poppins(
       fontSize: 14.0,
       fontWeight: FontWeight.w700,
-      color: Colors.white,
+      color: WhatsAppConstants.klightTextThemeColor,
     ),
     headline1: GoogleFonts.poppins(
       fontSize: 32.0,
       fontWeight: FontWeight.bold,
-      color: Colors.black,
+      color: WhatsAppConstants.klightTextThemeColor,
     ),
     headline2: GoogleFonts.poppins(
       fontSize: 21.0,
       fontWeight: FontWeight.w700,
-      color: Colors.black,
+      color: WhatsAppConstants.klightTextThemeColor,
     ),
     headline3: GoogleFonts.poppins(
       fontSize: 16.0,
       fontWeight: FontWeight.w600,
-      color: Colors.black,
+      color: WhatsAppConstants.klightTextThemeColor,
     ),
     headline6: GoogleFonts.poppins(
       fontSize: 20.0,
       fontWeight: FontWeight.w600,
-      color: Colors.black,
+      color: WhatsAppConstants.klightTextThemeColor,
     ),
   );
 
