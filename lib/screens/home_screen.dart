@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:whatsapp_clone/screens/screens.dart';
 import '../core/theme/theme.dart';
 
@@ -66,37 +65,26 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
             Tab(
               child: Text(
                 'CHATS',
-                style: GoogleFonts.poppins(
-                  color: WhatsAppConstants.kdarkTextThemeColor,
-                  fontWeight: FontWeight.w500,
-                ),
+                style: Theme.of(context).textTheme.headline2,
               ),
             ),
             Tab(
               child: Text(
                 'STATUS',
-                style: GoogleFonts.poppins(
-                  color: WhatsAppConstants.kdarkTextThemeColor,
-                  fontWeight: FontWeight.w500,
-                ),
+                style: Theme.of(context).textTheme.headline2,
               ),
             ),
             Tab(
               child: Text(
                 'CALLS',
-                style: GoogleFonts.poppins(
-                  color: WhatsAppConstants.kdarkTextThemeColor,
-                  fontWeight: FontWeight.w500,
-                ),
+                style: Theme.of(context).textTheme.headline2,
               ),
             ),
           ],
         ),
         title: Text(
           WhatsAppConstants.title,
-          style: GoogleFonts.poppins(
-            color: WhatsAppConstants.kdarkTextThemeColor,
-          ),
+          style: Theme.of(context).textTheme.headline1,
         ),
       ),
       body: TabBarView(
