@@ -66,15 +66,10 @@ class WhatsAppTheme {
   static ThemeData light() {
     return ThemeData(
       brightness: Brightness.light,
-      checkboxTheme: CheckboxThemeData(
-        fillColor: MaterialStateColor.resolveWith((states) {
-          return Colors.black;
-        }),
-      ),
       tabBarTheme: const TabBarTheme(),
       floatingActionButtonTheme: const FloatingActionButtonThemeData(
-        foregroundColor: WhatsAppConstants.klightThemeColor,
-        backgroundColor: Colors.black,
+        foregroundColor: null,
+        backgroundColor: Colors.green,
       ),
       textTheme: lightTextTheme,
     );
@@ -87,10 +82,7 @@ class WhatsAppTheme {
       tabBarTheme: const TabBarTheme(),
       floatingActionButtonTheme: const FloatingActionButtonThemeData(
         foregroundColor: null,
-        backgroundColor: Colors.green,
-      ),
-      bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-        selectedItemColor: Colors.green,
+        backgroundColor: WhatsAppConstants.kfabColor,
       ),
       textTheme: darkTextTheme,
     );
