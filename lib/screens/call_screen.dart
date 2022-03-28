@@ -8,15 +8,30 @@ class CallScreen extends StatelessWidget {
     return Center(
       child: Column(
         children: [
-          const Text('To start calling contacts who have'),
+          Text(
+            'To start calling contacts who have',
+            style: Theme.of(context).textTheme.bodyText2,
+          ),
           Row(
-            children: const [
-              Text('WhatsApp, tap'),
-              Icon(Icons.add_call),
-              Text('at the bottom  of your')
+            children: [
+              Text(
+                'WhatsApp, tap',
+                style: Theme.of(context).textTheme.bodyText2,
+              ),
+              // ignore: prefer_const_constructors
+              Icon(
+                Icons.add_call,
+              ),
+              Text(
+                'at the bottom  of your',
+                style: Theme.of(context).textTheme.bodyText2,
+              ),
             ],
           ),
-          const Text('screen.')
+          Text(
+            'screen.',
+            style: Theme.of(context).textTheme.bodyText2,
+          ),
         ],
       ),
     );
