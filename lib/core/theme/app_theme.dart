@@ -61,4 +61,38 @@ class WhatsAppTheme {
       color: WhatsAppConstants.kdarkTextThemeColor,
     ),
   );
+
+  // light theme
+  static ThemeData light() {
+    return ThemeData(
+      brightness: Brightness.light,
+      checkboxTheme: CheckboxThemeData(
+        fillColor: MaterialStateColor.resolveWith((states) {
+          return Colors.black;
+        }),
+      ),
+      tabBarTheme: const TabBarTheme(),
+      floatingActionButtonTheme: const FloatingActionButtonThemeData(
+        foregroundColor: WhatsAppConstants.klightThemeColor,
+        backgroundColor: Colors.black,
+      ),
+      textTheme: lightTextTheme,
+    );
+  }
+
+// dark theme
+  static ThemeData dark() {
+    return ThemeData(
+      brightness: Brightness.dark,
+      tabBarTheme: const TabBarTheme(),
+      floatingActionButtonTheme: const FloatingActionButtonThemeData(
+        foregroundColor: null,
+        backgroundColor: Colors.green,
+      ),
+      bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+        selectedItemColor: Colors.green,
+      ),
+      textTheme: darkTextTheme,
+    );
+  }
 }
