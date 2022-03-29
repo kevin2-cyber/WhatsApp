@@ -25,10 +25,10 @@ class CallScreen extends StatelessWidget {
               SizedBox(
                 width: 6.0,
               ),
-              Icon(
+              const Icon(
                 Icons.add_call,
               ),
-              SizedBox(
+              const SizedBox(
                 width: 6.0,
               ),
               Text(
