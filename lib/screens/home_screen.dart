@@ -54,14 +54,6 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
         bottom: TabBar(
           controller: _tabController,
           tabs: [
-            // const Tab(
-            //   child: SizedBox(
-            //     width: 30,
-            //     child: Icon(
-            //       Icons.camera_alt,
-            //     ),
-            //   ),
-            // ),
             Tab(
               child: Text(
                 'CHATS',
