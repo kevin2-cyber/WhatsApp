@@ -65,26 +65,26 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
             Tab(
               child: Text(
                 'CHATS',
-                style: Theme.of(context).textTheme.headline2,
+                style: Theme.of(context).textTheme.bodyText1,
               ),
             ),
             Tab(
               child: Text(
                 'STATUS',
-                style: Theme.of(context).textTheme.headline2,
+                style: Theme.of(context).textTheme.bodyText1,
               ),
             ),
             Tab(
               child: Text(
                 'CALLS',
-                style: Theme.of(context).textTheme.headline2,
+                style: Theme.of(context).textTheme.bodyText1,
               ),
             ),
           ],
         ),
         title: Text(
           WhatsAppConstants.title,
-          style: Theme.of(context).textTheme.headline1,
+          style: Theme.of(context).textTheme.headline5,
         ),
       ),
       body: TabBarView(
@@ -101,7 +101,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   }
 
   Widget _bottomButtons() {
-    return _tabController.index == 1
+    return _tabController.index == 0
         ? FloatingActionButton(
             shape: const StadiumBorder(),
             onPressed: () {},
@@ -111,7 +111,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
               size: 20.0,
               color: Colors.white,
             ))
-        : _tabController.index == 2
+        : _tabController.index == 1
             ? FloatingActionButton(
                 shape: const StadiumBorder(),
                 onPressed: () {},
