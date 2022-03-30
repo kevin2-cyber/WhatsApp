@@ -12,7 +12,7 @@ class WhatsApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: WhatsAppTheme.themeData,
-      title: WhatsAppConstants.title,
+      title: WhatsAppTheme.title,
       home: const DefaultTabController(
         length: 3,
         child: Home(),
