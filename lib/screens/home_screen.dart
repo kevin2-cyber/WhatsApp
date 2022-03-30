@@ -36,7 +36,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
       appBar: AppBar(
         actions: <Widget>[
           IconButton(
-            color: WhatsAppConstants.kdarkTextThemeColor,
+            color: WhatsAppTheme.kdarkTextThemeColor,
             onPressed: () {},
             icon: const Icon(
               Icons.search,
@@ -47,10 +47,10 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
               Icons.more_vert,
             ),
             onPressed: () {},
-            color: WhatsAppConstants.kdarkTextThemeColor,
+            color: WhatsAppTheme.kdarkTextThemeColor,
           ),
         ],
-        backgroundColor: WhatsAppConstants.kdarkAppBarColor,
+        backgroundColor: WhatsAppTheme.kdarkAppBarColor,
         bottom: TabBar(
           controller: _tabController,
           tabs: [
@@ -75,7 +75,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
           ],
         ),
         title: Text(
-          WhatsAppConstants.title,
+          WhatsAppTheme.title,
           style: Theme.of(context).textTheme.headline5,
         ),
       ),
@@ -97,7 +97,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
         ? FloatingActionButton(
             shape: const StadiumBorder(),
             onPressed: () {},
-            backgroundColor: WhatsAppConstants.kfabColor,
+            backgroundColor: WhatsAppTheme.kfabColor,
             child: const Icon(
               Icons.message,
               size: 20.0,
@@ -107,7 +107,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
             ? FloatingActionButton(
                 shape: const StadiumBorder(),
                 onPressed: () {},
-                backgroundColor: WhatsAppConstants.kfabColor,
+                backgroundColor: WhatsAppTheme.kfabColor,
                 child: const Icon(
                   Icons.camera_alt,
                   size: 20.0,
@@ -116,7 +116,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
             : FloatingActionButton(
                 shape: const StadiumBorder(),
                 onPressed: () {},
-                backgroundColor: WhatsAppConstants.kfabColor,
+                backgroundColor: WhatsAppTheme.kfabColor,
                 child: const Icon(
                   Icons.add_call,
                   size: 20.0,
