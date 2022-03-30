@@ -15,7 +15,7 @@ class StatusScreen extends StatelessWidget {
             height: 40,
             width: 40,
             child: FloatingActionButton(
-              backgroundColor: WhatsAppConstants.kdarkAppBarColor,
+              backgroundColor: WhatsAppTheme.kdarkAppBarColor,
               onPressed: () {},
               child: const Icon(
                 Icons.edit,
