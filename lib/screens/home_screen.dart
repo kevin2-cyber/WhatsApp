@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
-import 'package:google_fonts/google_fonts.dart';
-// import 'package:whatsapp_clone/screens/camera_screen.dart';
 import 'package:whatsapp_clone/screens/screens.dart';
-
-import '../core/constants-and-themes/constants_themes.dart';
+import '../core/theme/theme.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -62,37 +59,26 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
             Tab(
               child: Text(
                 'CHATS',
-                style: GoogleFonts.poppins(
-                  color: WhatsAppTheme.kdarkTextThemeColor,
-                  fontWeight: FontWeight.w500,
-                ),
+                style: Theme.of(context).textTheme.bodyText1,
               ),
             ),
             Tab(
               child: Text(
                 'STATUS',
-                style: GoogleFonts.poppins(
-                  color: WhatsAppTheme.kdarkTextThemeColor,
-                  fontWeight: FontWeight.w500,
-                ),
+                style: Theme.of(context).textTheme.bodyText1,
               ),
             ),
             Tab(
               child: Text(
                 'CALLS',
-                style: GoogleFonts.poppins(
-                  color: WhatsAppTheme.kdarkTextThemeColor,
-                  fontWeight: FontWeight.w500,
-                ),
+                style: Theme.of(context).textTheme.bodyText1,
               ),
             ),
           ],
         ),
         title: Text(
-          WhatsAppConstants.title,
-          style: GoogleFonts.poppins(
-            color: WhatsAppTheme.kdarkTextThemeColor,
-          ),
+          WhatsAppTheme.title,
+          style: Theme.of(context).textTheme.headline5,
         ),
       ),
       body: TabBarView(
@@ -119,23 +105,9 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
               color: Colors.white,
             ))
         : _tabController.index == 1
-            // ? FloatingActionButton(
-            //     shape: const StadiumBorder(),
-            //     onPressed: () {},
-            //     backgroundColor: WhatsAppTheme.kfabColor,
-            //     child: const Icon(
-            //       Icons.camera_alt,
-            //       size: 20.0,
-            //       color: Colors.white,
-            //     ))
             ? SpeedDial(
                 openCloseDial: isDialOpen,
-                child: const Icon(
-                    Icons.camera_alt,
-                  size: 20.0,
-                  color: Colors.white,
-                ),
-                )
+              )
             : FloatingActionButton(
                 // shape: const StadiumBorder(),
                 onPressed: () {},
