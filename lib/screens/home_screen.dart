@@ -130,7 +130,11 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
             //     ))
             ? SpeedDial(
                 openCloseDial: isDialOpen,
-                child: Icon(Icons.camera_alt),
+                child: const Icon(
+                    Icons.camera_alt,
+                  size: 20.0,
+                  color: Colors.white,
+                ),
                 )
             : FloatingActionButton(
                 // shape: const StadiumBorder(),
