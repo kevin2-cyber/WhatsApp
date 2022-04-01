@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:whatsapp_clone/screens/camera_screen.dart';
 import 'package:whatsapp_clone/screens/screens.dart';
@@ -14,6 +15,7 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   late TabController _tabController;
+  ValueNotifier<bool> isDialOpen = ValueNotifier(false);
 
   @override
   void initState() {
@@ -117,15 +119,18 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
               color: Colors.white,
             ))
         : _tabController.index == 2
-            ? FloatingActionButton(
-                shape: const StadiumBorder(),
-                onPressed: () {},
-                backgroundColor: WhatsAppTheme.kfabColor,
-                child: const Icon(
-                  Icons.camera_alt,
-                  size: 20.0,
-                  color: Colors.white,
-                ))
+            // ? FloatingActionButton(
+            //     shape: const StadiumBorder(),
+            //     onPressed: () {},
+            //     backgroundColor: WhatsAppTheme.kfabColor,
+            //     child: const Icon(
+            //       Icons.camera_alt,
+            //       size: 20.0,
+            //       color: Colors.white,
+            //     ))
+          ? SpeedDial(
+      openCloseDial: isDialOpen,
+    )
             : FloatingActionButton(
                 shape: const StadiumBorder(),
                 onPressed: () {},
