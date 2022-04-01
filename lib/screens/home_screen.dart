@@ -18,7 +18,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: 4, vsync: this, initialIndex: 0);
+    _tabController = TabController(length: 3, vsync: this, initialIndex: 0);
     _tabController.addListener(_handleTabIndex);
   }
 
@@ -57,14 +57,6 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
         bottom: TabBar(
           controller: _tabController,
           tabs: [
-            const Tab(
-              child: SizedBox(
-                width: 30,
-                child: Icon(
-                  Icons.camera_alt,
-                ),
-              ),
-            ),
             Tab(
               child: Text(
                 'CHATS',
@@ -104,7 +96,6 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
       body: TabBarView(
         controller: _tabController,
         children: const [
-          CameraScreen(),
           ChatScreen(),
           StatusScreen(),
           CallScreen(),
