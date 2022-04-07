@@ -104,15 +104,29 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
               color: Colors.white,
             ))
         : _tabController.index == 1
-            ? FloatingActionButton(
-                shape: const StadiumBorder(),
-                onPressed: () {},
-                backgroundColor: WhatsAppTheme.kfabColor,
-                child: const Icon(
-                  Icons.camera_alt,
-                  size: 20.0,
-                  color: Colors.white,
-                ))
+            ? Column(
+      mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                FloatingActionButton(
+                    shape: const StadiumBorder(),
+                    onPressed: () {},
+                    backgroundColor: WhatsAppTheme.kfabColor,
+                    child: const Icon(
+                      Icons.edit,
+                      size: 20.0,
+                      color: Colors.white,
+                    )),
+                FloatingActionButton(
+                    shape: const StadiumBorder(),
+                    onPressed: () {},
+                    backgroundColor: WhatsAppTheme.kfabColor,
+                    child: const Icon(
+                      Icons.camera_alt,
+                      size: 20.0,
+                      color: Colors.white,
+                    )),
+              ],
+            )
             : FloatingActionButton(
                 shape: const StadiumBorder(),
                 onPressed: () {},
