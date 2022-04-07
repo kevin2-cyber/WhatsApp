@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:whatsapp_clone/screens/screens.dart';
 import '../core/theme/theme.dart';
 
@@ -120,6 +119,9 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                         size: 20.0,
                         color: Colors.white,
                       )),
+                ),
+                const SizedBox(
+                  height: 10.0,
                 ),
                 FloatingActionButton(
                     shape: const StadiumBorder(),
