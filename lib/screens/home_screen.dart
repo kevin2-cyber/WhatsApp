@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:whatsapp_clone/screens/screens.dart';
 import '../core/theme/theme.dart';
 
@@ -11,6 +12,7 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   late TabController _tabController;
+  ValueNotifier<bool> isDialOpen = ValueNotifier(false);
 
   @override
   void initState() {
@@ -82,7 +84,6 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
       body: TabBarView(
         controller: _tabController,
         children: const [
-          // CameraScreen(),
           ChatScreen(),
           StatusScreen(),
           CallScreen(),
@@ -95,7 +96,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   Widget _bottomButtons() {
     return _tabController.index == 0
         ? FloatingActionButton(
-            shape: const StadiumBorder(),
+            // shape: const StadiumBorder(),
             onPressed: () {},
             backgroundColor: WhatsAppTheme.kfabColor,
             child: const Icon(
@@ -132,7 +133,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
               ],
             )
             : FloatingActionButton(
-                shape: const StadiumBorder(),
+                // shape: const StadiumBorder(),
                 onPressed: () {},
                 backgroundColor: WhatsAppTheme.kfabColor,
                 child: const Icon(
