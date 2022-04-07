@@ -11,7 +11,6 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   late TabController _tabController;
-  ValueNotifier<bool> isDialOpen = ValueNotifier(false);
 
   @override
   void initState() {
@@ -105,35 +104,35 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
             ))
         : _tabController.index == 1
             ? Column(
-      mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                SizedBox(
-                  height: 40.0,
-                  width: 40.0,
-                  child: FloatingActionButton(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  SizedBox(
+                    height: 40.0,
+                    width: 40.0,
+                    child: FloatingActionButton(
+                        shape: const StadiumBorder(),
+                        onPressed: () {},
+                        backgroundColor: WhatsAppTheme.kdarkAppBarColor,
+                        child: const Icon(
+                          Icons.edit,
+                          size: 20.0,
+                          color: Colors.white,
+                        )),
+                  ),
+                  const SizedBox(
+                    height: 10.0,
+                  ),
+                  FloatingActionButton(
                       shape: const StadiumBorder(),
                       onPressed: () {},
-                      backgroundColor: WhatsAppTheme.kdarkAppBarColor,
+                      backgroundColor: WhatsAppTheme.kfabColor,
                       child: const Icon(
-                        Icons.edit,
+                        Icons.camera_alt,
                         size: 20.0,
                         color: Colors.white,
                       )),
-                ),
-                const SizedBox(
-                  height: 10.0,
-                ),
-                FloatingActionButton(
-                    shape: const StadiumBorder(),
-                    onPressed: () {},
-                    backgroundColor: WhatsAppTheme.kfabColor,
-                    child: const Icon(
-                      Icons.camera_alt,
-                      size: 20.0,
-                      color: Colors.white,
-                    )),
-              ],
-            )
+                ],
+              )
             : FloatingActionButton(
                 // shape: const StadiumBorder(),
                 onPressed: () {},
