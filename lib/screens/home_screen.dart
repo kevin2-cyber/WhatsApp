@@ -120,6 +120,9 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                         color: Colors.white,
                       )),
                 ),
+                const SizedBox(
+                  height: 10.0,
+                ),
                 FloatingActionButton(
                     shape: const StadiumBorder(),
                     onPressed: () {},
