@@ -105,9 +105,33 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
               color: Colors.white,
             ))
         : _tabController.index == 1
-            ? SpeedDial(
-                openCloseDial: isDialOpen,
-              )
+            ? Column(
+      mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                SizedBox(
+                  height: 40.0,
+                  width: 40.0,
+                  child: FloatingActionButton(
+                      shape: const StadiumBorder(),
+                      onPressed: () {},
+                      backgroundColor: WhatsAppTheme.kdarkAppBarColor,
+                      child: const Icon(
+                        Icons.edit,
+                        size: 20.0,
+                        color: Colors.white,
+                      )),
+                ),
+                FloatingActionButton(
+                    shape: const StadiumBorder(),
+                    onPressed: () {},
+                    backgroundColor: WhatsAppTheme.kfabColor,
+                    child: const Icon(
+                      Icons.camera_alt,
+                      size: 20.0,
+                      color: Colors.white,
+                    )),
+              ],
+            )
             : FloatingActionButton(
                 // shape: const StadiumBorder(),
                 onPressed: () {},
