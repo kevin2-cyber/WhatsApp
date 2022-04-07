@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:whatsapp_clone/screens/screens.dart';
 import '../core/theme/theme.dart';
 
