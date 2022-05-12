@@ -71,28 +71,17 @@ class WhatsAppTheme {
   );
 
   // light theme
-  static ThemeData light() {
-    return ThemeData(
-      brightness: Brightness.light,
-      tabBarTheme: const TabBarTheme(),
-      floatingActionButtonTheme: const FloatingActionButtonThemeData(
-        foregroundColor: null,
-        backgroundColor: Colors.green,
-      ),
-      textTheme: lightTextTheme,
-    );
-  }
+  static final lightTheme = ThemeData(
+    scaffoldBackgroundColor: klightThemeColor,
+    visualDensity: VisualDensity.adaptivePlatformDensity,
+    textTheme: lightTextTheme,
+  );
 
 // dark theme
-  static ThemeData dark() {
-    return ThemeData(
-      brightness: Brightness.dark,
-      tabBarTheme: const TabBarTheme(),
-      floatingActionButtonTheme: const FloatingActionButtonThemeData(
-        foregroundColor: null,
-        backgroundColor: kfabColor,
-      ),
-      textTheme: darkTextTheme,
-    );
-  }
+  static final darkTheme = ThemeData(
+    scaffoldBackgroundColor: kdarkThemeColor,
+    visualDensity: VisualDensity.adaptivePlatformDensity,
+    textTheme: darkTextTheme,
+  );
+
 }
