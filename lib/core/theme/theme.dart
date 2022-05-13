@@ -70,11 +70,22 @@ class WhatsAppTheme {
     ),
   );
 
+  static final darkAppBarTheme = AppBarTheme(
+    backgroundColor : kdarkAppBarColor,
+    textTheme: darkTextTheme,
+  );
+
+  static final lightAppBarTheme = AppBarTheme(
+    backgroundColor: klightAppBarColor,
+    textTheme: lightTextTheme,
+  );
+
   // light theme
   static final lightTheme = ThemeData(
     scaffoldBackgroundColor: klightThemeColor,
     visualDensity: VisualDensity.adaptivePlatformDensity,
     textTheme: lightTextTheme,
+    appBarTheme: lightAppBarTheme,
   );
 
 // dark theme
@@ -82,6 +93,7 @@ class WhatsAppTheme {
     scaffoldBackgroundColor: kdarkThemeColor,
     visualDensity: VisualDensity.adaptivePlatformDensity,
     textTheme: darkTextTheme,
+    appBarTheme: darkAppBarTheme,
   );
 
 }
