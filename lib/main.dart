@@ -11,7 +11,9 @@ class WhatsApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: WhatsAppTheme.themeData,
+      themeMode: ThemeMode.system,
+      theme: WhatsAppTheme.lightTheme,
+      darkTheme: WhatsAppTheme.darkTheme,
       title: WhatsAppTheme.title,
       home: const DefaultTabController(
         length: 3,
