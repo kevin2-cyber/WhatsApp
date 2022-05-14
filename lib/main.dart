@@ -14,7 +14,7 @@ class WhatsApp extends StatelessWidget {
       theme: WhatsAppTheme.themeData,
       title: WhatsAppTheme.title,
       home: const DefaultTabController(
-        length: 3,
+        length: 4,
         child: Home(),
       ),
     );

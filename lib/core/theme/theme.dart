@@ -43,12 +43,12 @@ class WhatsAppTheme {
   );
 
   static TextTheme darkTextTheme = TextTheme(
-    bodyText1: GoogleFonts.poppins(
+    bodyText1: GoogleFonts.redRose(
       fontSize: 14.0,
       fontWeight: FontWeight.w700,
       color: kdarkTextThemeColor,
     ),
-    headline1: GoogleFonts.poppins(
+    headline1: GoogleFonts.redRose(
       fontSize: 32.0,
       fontWeight: FontWeight.bold,
       color: kdarkTextThemeColor,
@@ -58,12 +58,12 @@ class WhatsAppTheme {
       fontWeight: FontWeight.w700,
       color: kdarkTextThemeColor,
     ),
-    headline3: GoogleFonts.poppins(
+    headline3: GoogleFonts.redRose(
       fontSize: 16.0,
       fontWeight: FontWeight.w600,
       color: kdarkTextThemeColor,
     ),
-    headline6: GoogleFonts.poppins(
+    headline6: GoogleFonts.redRose(
       fontSize: 20.0,
       fontWeight: FontWeight.w600,
       color: kdarkTextThemeColor,

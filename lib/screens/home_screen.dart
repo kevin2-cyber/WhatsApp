@@ -15,7 +15,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: 3, vsync: this, initialIndex: 0);
+    _tabController = TabController(length: 4, vsync: this, initialIndex: 0);
     _tabController.addListener(_handleTabIndex);
   }
 
@@ -52,39 +52,53 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
         ],
         backgroundColor: WhatsAppTheme.kdarkAppBarColor,
         bottom: TabBar(
-          controller: _tabController,
-          tabs: [
-            Tab(
+            // isScrollable: true,
+            controller: _tabController,
+            // labelPadding: const EdgeInsets.symmetric(horizontal: 20.0),
+          tabs: <Widget>[
+            Container(
+              height: 40,
+              width: 10,
+              child: Icon(
+                  Icons.camera_alt,
+                color: WhatsAppTheme.kdarkTextThemeColor,
+              ),
+            ),
+            Container(
+              height: 40,
               child: Text(
                 'CHATS',
-                style: Theme.of(context).textTheme.bodyText1,
+                style: WhatsAppTheme.darkTextTheme.headline3,
               ),
             ),
-            Tab(
+            Container(
+              height: 40,
               child: Text(
                 'STATUS',
-                style: Theme.of(context).textTheme.bodyText1,
+                style: WhatsAppTheme.darkTextTheme.headline3,
               ),
             ),
-            Tab(
+        Container(
+          height: 40,
               child: Text(
                 'CALLS',
-                style: Theme.of(context).textTheme.bodyText1,
+                style: WhatsAppTheme.darkTextTheme.headline3,
               ),
             ),
           ],
         ),
         title: Text(
           WhatsAppTheme.title,
-          style: Theme.of(context).textTheme.headline5,
+          style: WhatsAppTheme.darkTextTheme.headline2,
         ),
       ),
       body: TabBarView(
         controller: _tabController,
-        children: const [
-          ChatScreen(),
-          StatusScreen(),
-          CallScreen(),
+        children: [
+          Container(),
+          const ChatScreen(),
+          const StatusScreen(),
+          const CallScreen(),
         ],
       ),
       floatingActionButton: _bottomButtons(),
