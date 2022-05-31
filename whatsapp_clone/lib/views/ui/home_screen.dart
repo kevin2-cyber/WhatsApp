@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../utils/theme.dart';
+import 'screens.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -95,9 +96,9 @@ class _HomeState extends State<Home>
         controller: _tabController,
         children: [
           Container(),
-          Container(),
-          Container(),
-          Container(),
+          const ChatScreen(),
+          const StatusScreen(),
+          const CallScreen(),
         ],
       ),
       floatingActionButton: _bottomButtons(),
