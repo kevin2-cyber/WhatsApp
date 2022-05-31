@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/utils/theme.dart';
+import '../utils/theme.dart';
+import '../views/ui/home_screen.dart';
 
 void main() => runApp(const App());
 
@@ -14,6 +15,10 @@ class App extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
+      home: const DefaultTabController(
+        length: 3,
+        child: Home(),
+      ),
     );
   }
 }
