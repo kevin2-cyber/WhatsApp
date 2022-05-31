@@ -22,9 +22,7 @@ class CallScreen extends StatelessWidget {
                 'WhatsApp, tap',
                 style: AppTheme.darkTextTheme.headline3,
               ),
-              //
-              // ignore: prefer_const_constructors
-              SizedBox(
+              const SizedBox(
                 width: 6.0,
               ),
               const Icon(
@@ -46,6 +44,6 @@ class CallScreen extends StatelessWidget {
           style: AppTheme.darkTextTheme.headline3,
         ),
       ],
-    );;
+    );
   }
 }
