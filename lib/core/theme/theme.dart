@@ -74,14 +74,12 @@ class WhatsAppTheme {
     indicator: BoxDecoration(
       color: kdarkAppBarColor,
     ),
-    textTheme: darkTextTheme,
   );
 
   static final lightTabBarTheme = TabBarTheme(
     indicator: BoxDecoration(
       color: klightAppBarColor,
     ),
-    textTheme: lightTextTheme,
   );
 
   // light theme
