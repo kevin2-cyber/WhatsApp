@@ -70,29 +70,34 @@ class WhatsAppTheme {
     ),
   );
 
+  static final darkTabBarTheme = TabBarTheme(
+    indicator: BoxDecoration(
+      color: kdarkAppBarColor,
+    ),
+    textTheme: darkTextTheme,
+  );
+
+  static final lightTabBarTheme = TabBarTheme(
+    indicator: BoxDecoration(
+      color: klightAppBarColor,
+    ),
+    textTheme: lightTextTheme,
+  );
+
   // light theme
-  static ThemeData light() {
-    return ThemeData(
-      brightness: Brightness.light,
-      tabBarTheme: const TabBarTheme(),
-      floatingActionButtonTheme: const FloatingActionButtonThemeData(
-        foregroundColor: null,
-        backgroundColor: Colors.green,
-      ),
-      textTheme: lightTextTheme,
-    );
-  }
+  static final lightTheme = ThemeData(
+    scaffoldBackgroundColor: klightThemeColor,
+    visualDensity: VisualDensity.adaptivePlatformDensity,
+    textTheme: lightTextTheme,
+    tabBarTheme: lightTabBarTheme,
+  );
 
 // dark theme
-  static ThemeData dark() {
-    return ThemeData(
-      brightness: Brightness.dark,
-      tabBarTheme: const TabBarTheme(),
-      floatingActionButtonTheme: const FloatingActionButtonThemeData(
-        foregroundColor: null,
-        backgroundColor: kfabColor,
-      ),
-      textTheme: darkTextTheme,
-    );
-  }
+  static final darkTheme = ThemeData(
+    scaffoldBackgroundColor: kdarkThemeColor,
+    visualDensity: VisualDensity.adaptivePlatformDensity,
+    textTheme: darkTextTheme,
+    tabBarTheme: darkTabBarTheme,
+  );
+
 }
