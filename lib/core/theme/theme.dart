@@ -15,27 +15,27 @@ class WhatsAppTheme {
   static const String title = 'WhatsApp';
 
   static TextTheme lightTextTheme = TextTheme(
-    bodyText1: GoogleFonts.poppins(
+    bodyLarge: GoogleFonts.poppins(
       fontSize: 14.0,
       fontWeight: FontWeight.w700,
       color: klightTextThemeColor,
     ),
-    headline1: GoogleFonts.poppins(
+    displayLarge: GoogleFonts.poppins(
       fontSize: 32.0,
       fontWeight: FontWeight.bold,
       color: klightTextThemeColor,
     ),
-    headline2: GoogleFonts.poppins(
+    displayMedium: GoogleFonts.poppins(
       fontSize: 21.0,
       fontWeight: FontWeight.w700,
       color: klightTextThemeColor,
     ),
-    headline3: GoogleFonts.poppins(
+    displaySmall: GoogleFonts.poppins(
       fontSize: 16.0,
       fontWeight: FontWeight.w600,
       color: klightTextThemeColor,
     ),
-    headline6: GoogleFonts.poppins(
+    titleLarge: GoogleFonts.poppins(
       fontSize: 20.0,
       fontWeight: FontWeight.w600,
       color: klightTextThemeColor,
