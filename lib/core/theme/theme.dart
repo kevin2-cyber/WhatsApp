@@ -15,27 +15,27 @@ class WhatsAppTheme {
   static const String title = 'WhatsApp';
 
   static TextTheme lightTextTheme = TextTheme(
-    bodyText1: GoogleFonts.poppins(
+    bodyLarge: GoogleFonts.poppins(
       fontSize: 14.0,
       fontWeight: FontWeight.w700,
       color: klightTextThemeColor,
     ),
-    headline1: GoogleFonts.poppins(
+    displayLarge: GoogleFonts.poppins(
       fontSize: 32.0,
       fontWeight: FontWeight.bold,
       color: klightTextThemeColor,
     ),
-    headline2: GoogleFonts.poppins(
+    displayMedium: GoogleFonts.poppins(
       fontSize: 21.0,
       fontWeight: FontWeight.w700,
       color: klightTextThemeColor,
     ),
-    headline3: GoogleFonts.poppins(
+    displaySmall: GoogleFonts.poppins(
       fontSize: 16.0,
       fontWeight: FontWeight.w600,
       color: klightTextThemeColor,
     ),
-    headline6: GoogleFonts.poppins(
+    titleLarge: GoogleFonts.poppins(
       fontSize: 20.0,
       fontWeight: FontWeight.w600,
       color: klightTextThemeColor,
@@ -43,56 +43,59 @@ class WhatsAppTheme {
   );
 
   static TextTheme darkTextTheme = TextTheme(
-    bodyText1: GoogleFonts.redRose(
+    bodyLarge: GoogleFonts.redRose(
       fontSize: 14.0,
       fontWeight: FontWeight.w700,
       color: kdarkTextThemeColor,
     ),
-    headline1: GoogleFonts.redRose(
+    displayLarge: GoogleFonts.redRose(
       fontSize: 32.0,
       fontWeight: FontWeight.bold,
       color: kdarkTextThemeColor,
     ),
-    headline2: GoogleFonts.poppins(
+    displayMedium: GoogleFonts.poppins(
       fontSize: 21.0,
       fontWeight: FontWeight.w700,
       color: kdarkTextThemeColor,
     ),
-    headline3: GoogleFonts.redRose(
+    displaySmall: GoogleFonts.redRose(
       fontSize: 16.0,
       fontWeight: FontWeight.w600,
       color: kdarkTextThemeColor,
     ),
-    headline6: GoogleFonts.redRose(
+    titleLarge: GoogleFonts.redRose(
       fontSize: 20.0,
       fontWeight: FontWeight.w600,
       color: kdarkTextThemeColor,
     ),
   );
 
+  static final darkTabBarTheme = TabBarTheme(
+    indicator: BoxDecoration(
+      color: kdarkAppBarColor,
+    ),
+  );
+
+  static final lightTabBarTheme = TabBarTheme(
+    indicator: BoxDecoration(
+      color: klightAppBarColor,
+    ),
+  );
+
   // light theme
-  static ThemeData light() {
-    return ThemeData(
-      brightness: Brightness.light,
-      tabBarTheme: const TabBarTheme(),
-      floatingActionButtonTheme: const FloatingActionButtonThemeData(
-        foregroundColor: null,
-        backgroundColor: Colors.green,
-      ),
-      textTheme: lightTextTheme,
-    );
-  }
+  static final lightTheme = ThemeData(
+    scaffoldBackgroundColor: klightThemeColor,
+    visualDensity: VisualDensity.adaptivePlatformDensity,
+    textTheme: lightTextTheme,
+    tabBarTheme: lightTabBarTheme,
+  );
 
 // dark theme
-  static ThemeData dark() {
-    return ThemeData(
-      brightness: Brightness.dark,
-      tabBarTheme: const TabBarTheme(),
-      floatingActionButtonTheme: const FloatingActionButtonThemeData(
-        foregroundColor: null,
-        backgroundColor: kfabColor,
-      ),
-      textTheme: darkTextTheme,
-    );
-  }
+  static final darkTheme = ThemeData(
+    scaffoldBackgroundColor: kdarkThemeColor,
+    visualDensity: VisualDensity.adaptivePlatformDensity,
+    textTheme: darkTextTheme,
+    tabBarTheme: darkTabBarTheme,
+  );
+
 }
