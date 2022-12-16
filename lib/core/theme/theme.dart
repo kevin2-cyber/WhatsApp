@@ -43,27 +43,27 @@ class WhatsAppTheme {
   );
 
   static TextTheme darkTextTheme = TextTheme(
-    bodyText1: GoogleFonts.redRose(
+    bodyLarge: GoogleFonts.redRose(
       fontSize: 14.0,
       fontWeight: FontWeight.w700,
       color: kdarkTextThemeColor,
     ),
-    headline1: GoogleFonts.redRose(
+    displayLarge: GoogleFonts.redRose(
       fontSize: 32.0,
       fontWeight: FontWeight.bold,
       color: kdarkTextThemeColor,
     ),
-    headline2: GoogleFonts.poppins(
+    displayMedium: GoogleFonts.poppins(
       fontSize: 21.0,
       fontWeight: FontWeight.w700,
       color: kdarkTextThemeColor,
     ),
-    headline3: GoogleFonts.redRose(
+    displaySmall: GoogleFonts.redRose(
       fontSize: 16.0,
       fontWeight: FontWeight.w600,
       color: kdarkTextThemeColor,
     ),
-    headline6: GoogleFonts.redRose(
+    titleLarge: GoogleFonts.redRose(
       fontSize: 20.0,
       fontWeight: FontWeight.w600,
       color: kdarkTextThemeColor,
