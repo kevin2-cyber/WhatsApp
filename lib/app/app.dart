@@ -23,7 +23,10 @@ class WhatsApp extends StatelessWidget {
         tabBarTheme: AppTheme.darkTabBarTheme,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: const Home(),
+      home: DefaultTabController(
+        length: 3,
+          child: const Home(),
+      ),
     );
   }
 }
