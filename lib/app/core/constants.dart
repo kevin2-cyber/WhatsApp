@@ -13,4 +13,7 @@ class AppConstants {
 
   // title
   static const String title = 'WhatsApp';
+
+  // font-family
+  static const String kFont = 'Helvetica';
 }
