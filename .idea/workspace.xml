@@ -9,9 +9,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce92f23c-b038-4f0e-9f07-228aeddb63f7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/lib/core/theme/theme.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/theme/theme.dart" afterDir="false" />
-    </list>
+    <list default="true" id="ce92f23c-b038-4f0e-9f07-228aeddb63f7" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
