@@ -4,12 +4,71 @@ import 'constants.dart';
 
 class AppTheme {
 
-  // light text theme
-  static TextTheme darkTextTheme = TextTheme(
+  // dark text theme
+  static TextTheme darkTextTheme = const TextTheme(
     bodyLarge: TextStyle(
       fontFamily: AppConstants.kFont,
-      fontSize: 14.0,
+      fontSize: 14,
       fontWeight: FontWeight.w700,
+      color: AppConstants.kDarkTextThemeColor
+    ),
+    displayLarge: TextStyle(
+      fontFamily: AppConstants.kFont,
+      fontSize: 32,
+      fontWeight: FontWeight.bold,
+      color: AppConstants.kDarkTextThemeColor,
+    ),
+    displayMedium: TextStyle(
+      fontFamily: AppConstants.kFont,
+      fontSize: 21,
+      fontWeight: FontWeight.w700,
+      color: AppConstants.kDarkTextThemeColor,
+    ),
+    displaySmall: TextStyle(
+      fontFamily: AppConstants.kFont,
+      fontSize: 16,
+      fontWeight: FontWeight.w600,
+      color: AppConstants.kDarkTextThemeColor,
+    ),
+    titleLarge: TextStyle(
+      fontFamily: AppConstants.kFont,
+      fontSize: 20,
+      fontWeight: FontWeight.w600,
+      color: AppConstants.kDarkTextThemeColor,
+    ),
+  );
+
+  // light text theme
+  static TextTheme lightTextTheme = const TextTheme(
+    bodyLarge: TextStyle(
+        fontFamily: AppConstants.kFont,
+        fontSize: 14,
+        fontWeight: FontWeight.w700,
+        color: AppConstants.kLightTextThemeColor
+    ),
+    displayLarge: TextStyle(
+      fontFamily: AppConstants.kFont,
+      fontSize: 32,
+      fontWeight: FontWeight.bold,
+      color: AppConstants.kLightTextThemeColor,
+    ),
+    displayMedium: TextStyle(
+      fontFamily: AppConstants.kFont,
+      fontSize: 21,
+      fontWeight: FontWeight.w700,
+      color: AppConstants.kLightTextThemeColor,
+    ),
+    displaySmall: TextStyle(
+      fontFamily: AppConstants.kFont,
+      fontSize: 16,
+      fontWeight: FontWeight.w600,
+      color: AppConstants.kLightTextThemeColor,
+    ),
+    titleLarge: TextStyle(
+      fontFamily: AppConstants.kFont,
+      fontSize: 20,
+      fontWeight: FontWeight.w600,
+      color: AppConstants.kLightTextThemeColor,
     ),
   );
 
