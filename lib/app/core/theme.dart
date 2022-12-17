@@ -4,6 +4,15 @@ import 'constants.dart';
 
 class AppTheme {
 
+  // light text theme
+  static TextTheme darkTextTheme = TextTheme(
+    bodyLarge: TextStyle(
+      fontFamily: AppConstants.kFont,
+      fontSize: 14.0,
+      fontWeight: FontWeight.w700,
+    ),
+  );
+
   // dark tab bar theme
   static const darkTabBarTheme = TabBarTheme(
     indicator: BoxDecoration(

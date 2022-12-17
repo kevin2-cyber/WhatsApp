@@ -52,7 +52,7 @@ flutter:
         - asset: assets/fonts/Helvetica-BoldOblique.ttf
         - asset: assets/fonts/helvetica-rounded-bold.otf
         - asset: assets/fonts/Helvetica-Bold.ttf
-          weight: 700
+          weight: 100
 
 
 
