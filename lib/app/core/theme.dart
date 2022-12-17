@@ -77,6 +77,8 @@ class AppTheme {
     indicator: BoxDecoration(
       color: AppConstants.kDarkAppBarColor,
     ),
+    labelColor: AppConstants.kFabColor,
+    unselectedLabelColor: AppConstants.kLightTextThemeColor,
   );
 
   // light tab bar theme
@@ -84,6 +86,8 @@ class AppTheme {
     indicator: BoxDecoration(
       color: AppConstants.kLightAppBarColor,
     ),
+    labelColor: Colors.white,
+    unselectedLabelColor: AppConstants.kLightTextThemeColor,
   );
 
   // light theme
