@@ -85,11 +85,13 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin{
       onPressed: () {},
       backgroundColor: AppConstants.kFabColor,
       child: const Icon(Icons.message_rounded),
-    ) : _controller.index == 1 ? FloatingActionButton(
+    ) : _controller.index == 1 ?
+    FloatingActionButton(
       onPressed: (){},
       backgroundColor: AppConstants.kFabColor,
       child: const Icon(Icons.camera_alt),
-    ) : FloatingActionButton(
+    ) :
+    FloatingActionButton(
       onPressed: (){},
       backgroundColor: AppConstants.kFabColor,
       child: const Icon(Icons.add_call),
