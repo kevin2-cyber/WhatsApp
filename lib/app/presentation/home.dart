@@ -30,12 +30,18 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin{
   void initState() {
     super.initState();
     _controller = TabController(length: tabs.length, vsync: this);
+    _controller.addListener(_handleTabIndex);
   }
 
   @override
   void dispose() {
+    _controller.removeListener(_handleTabIndex);
     _controller.dispose();
     super.dispose();
+  }
+
+  void _handleTabIndex() {
+    setState(() {});
   }
 
   @override
@@ -60,6 +66,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin{
           ),
         ],
         bottom: TabBar(
+          isScrollable: true,
           controller: _controller,
           tabs: tabs,
         ),
@@ -73,7 +80,8 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin{
   }
 
   Widget _fab() {
-    return _controller.index == 0 ? FloatingActionButton(
+    return _controller.index == 0 ?
+    FloatingActionButton(
       onPressed: () {},
       backgroundColor: AppConstants.kFabColor,
       child: const Icon(Icons.message_rounded),
