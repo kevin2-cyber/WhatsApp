@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../core/theme.dart';
 import 'status/status.fragment.dart';
 import '../core/constants.dart';
 import 'call/calls.fragment.dart';
@@ -66,7 +67,6 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin{
           ),
         ],
         bottom: TabBar(
-          isScrollable: true,
           controller: _controller,
           tabs: tabs,
         ),
@@ -86,11 +86,37 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin{
       backgroundColor: AppConstants.kFabColor,
       child: const Icon(Icons.message_rounded),
     ) : _controller.index == 1 ?
-    FloatingActionButton(
-      onPressed: (){},
-      backgroundColor: AppConstants.kFabColor,
-      child: const Icon(Icons.camera_alt),
-    ) :
+    Column(
+      mainAxisAlignment: MainAxisAlignment.end,
+      children: [
+        SizedBox(
+          height: 40.0,
+          width: 40.0,
+          child: FloatingActionButton(
+              shape: const StadiumBorder(),
+              onPressed: () {},
+              backgroundColor: AppConstants.kDarkAppBarColor,
+              child: const Icon(
+                Icons.edit,
+                size: 20.0,
+                color: Colors.white,
+              )),
+        ),
+        const SizedBox(
+          height: 10.0,
+        ),
+        FloatingActionButton(
+            shape: const StadiumBorder(),
+            onPressed: () {},
+            backgroundColor: AppConstants.kFabColor,
+            child: const Icon(
+              Icons.camera_alt,
+              size: 20.0,
+              color: Colors.white,
+            )),
+      ],
+    )
+     :
     FloatingActionButton(
       onPressed: (){},
       backgroundColor: AppConstants.kFabColor,
