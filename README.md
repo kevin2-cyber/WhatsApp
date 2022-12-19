@@ -1,3 +1,3 @@
 # WhatsApp
-WhatsApp UI clone using flutter framework
+WhatsApp android UI clone using flutter framework
 
