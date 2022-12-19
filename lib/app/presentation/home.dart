@@ -67,6 +67,8 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin{
           ),
         ],
         bottom: TabBar(
+          indicator: AppTheme.darkTabBarTheme.indicator,
+          labelColor: AppConstants.kFabColor,
           controller: _controller,
           tabs: tabs,
         ),
