@@ -28,13 +28,13 @@ class WhatsApp extends StatelessWidget {
         ),
       );
     } else if(Platform.isIOS) {
-      return CupertinoApp(
+      return const CupertinoApp(
         debugShowCheckedModeBanner: false,
         title: AppConstants.title,
         home: CupertinoHome(),
       );
     } else {
-      return MaterialApp(
+      return const MaterialApp(
         debugShowCheckedModeBanner: false,
         home: WhatsAppWeb(),
       );
