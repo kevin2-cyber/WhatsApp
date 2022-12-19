@@ -3,15 +3,13 @@ import 'package:flutter/material.dart';
 import 'constants.dart';
 
 class AppTheme {
-
   // dark text theme
   static TextTheme darkTextTheme = const TextTheme(
     bodyLarge: TextStyle(
-      fontFamily: AppConstants.kFont,
-      fontSize: 14,
-      fontWeight: FontWeight.w700,
-      color: AppConstants.kDarkTextThemeColor
-    ),
+        fontFamily: AppConstants.kFont,
+        fontSize: 14,
+        fontWeight: FontWeight.w700,
+        color: AppConstants.kDarkTextThemeColor),
     displayLarge: TextStyle(
       fontFamily: AppConstants.kFont,
       fontSize: 32,
@@ -44,8 +42,7 @@ class AppTheme {
         fontFamily: AppConstants.kFont,
         fontSize: 14,
         fontWeight: FontWeight.w700,
-        color: AppConstants.kLightTextThemeColor
-    ),
+        color: AppConstants.kLightTextThemeColor),
     displayLarge: TextStyle(
       fontFamily: AppConstants.kFont,
       fontSize: 32,
@@ -75,7 +72,13 @@ class AppTheme {
   // dark tab bar theme
   static const darkTabBarTheme = TabBarTheme(
     indicator: BoxDecoration(
-      color: AppConstants.kDarkAppBarColor,
+      color: Colors.transparent,
+      border: Border(
+        bottom: BorderSide(
+          color: AppConstants.kFabColor,
+          width: 3,
+        ),
+      ),
     ),
     labelColor: AppConstants.kFabColor,
     unselectedLabelColor: AppConstants.kLightTextThemeColor,
@@ -84,7 +87,13 @@ class AppTheme {
   // light tab bar theme
   static const lightTabBarTheme = TabBarTheme(
     indicator: BoxDecoration(
-      color: AppConstants.kLightAppBarColor,
+      color: Colors.transparent,
+      border: Border(
+        bottom: BorderSide(
+          color: Colors.white,
+          width: 3,
+        ),
+      ),
     ),
     labelColor: Colors.white,
     unselectedLabelColor: AppConstants.kLightTextThemeColor,
@@ -103,5 +112,4 @@ class AppTheme {
     visualDensity: VisualDensity.adaptivePlatformDensity,
     tabBarTheme: darkTabBarTheme,
   );
-
 }
