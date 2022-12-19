@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../core/theme.dart';
 import 'status/status.fragment.dart';
 import '../core/constants.dart';
 import 'call/calls.fragment.dart';
@@ -67,6 +66,16 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin{
           ),
         ],
         bottom: TabBar(
+          indicator: const BoxDecoration(
+            color: AppConstants.kDarkAppBarColor,
+            border: Border(
+              bottom: BorderSide(
+                color: AppConstants.kFabColor,
+                width: 3,
+              ),
+            ),
+          ),
+          labelColor: AppConstants.kFabColor,
           controller: _controller,
           tabs: tabs,
         ),
