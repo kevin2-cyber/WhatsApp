@@ -5,6 +5,12 @@ class ChatFragment extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      child: ListView.builder(
+        itemBuilder: (context,int index) {
+          return Row();
+        },
+      ),
+    );
   }
 }
