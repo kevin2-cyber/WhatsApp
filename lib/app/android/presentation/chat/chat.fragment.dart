@@ -6,10 +6,11 @@ class ChatFragment extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: ListView.builder(
-        itemBuilder: (context,int index) {
-          return Row();
-        },
+      padding: const EdgeInsets.all(4),
+      child: ListView.separated(
+        itemBuilder: (context,int index) => Row(),
+        separatorBuilder: (BuildContext context, int index) => const Divider(),
+        itemCount: 3,
       ),
     );
   }
