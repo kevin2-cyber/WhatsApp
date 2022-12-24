@@ -14,7 +14,7 @@ class WhatsApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (Platform.isAndroid) {
+    // if (Platform.isAndroid) {
       return MaterialApp(
         debugShowCheckedModeBanner: false,
         title: AppConstants.title,
@@ -27,17 +27,17 @@ class WhatsApp extends StatelessWidget {
           child: Home(),
         ),
       );
-    } else if(Platform.isIOS) {
-      return const CupertinoApp(
-        debugShowCheckedModeBanner: false,
-        title: AppConstants.title,
-        home: CupertinoHome(),
-      );
-    } else {
-      return const MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: WhatsAppWeb(),
-      );
-    }
+    // } else if(Platform.isIOS) {
+    //   return const CupertinoApp(
+    //     debugShowCheckedModeBanner: false,
+    //     title: AppConstants.title,
+    //     home: CupertinoHome(),
+    //   );
+    // } else {
+    //   return const MaterialApp(
+    //     debugShowCheckedModeBanner: false,
+    //     home: WhatsAppWeb(),
+    //   );
+    // }
   }
 }
