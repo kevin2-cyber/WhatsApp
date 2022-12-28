@@ -1,11 +1,6 @@
-import 'dart:io';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:whatsapp_clone/app/core/constants.dart';
 import 'package:whatsapp_clone/app/core/theme.dart';
-import 'package:whatsapp_clone/app/ios/presentation/home.dart';
-import 'package:whatsapp_clone/app/web/presentation/home.dart';
 
 import 'android/presentation/home.dart';
 
