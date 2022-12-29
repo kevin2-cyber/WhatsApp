@@ -49,8 +49,8 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: AppConstants.kDarkAppBarColor,
-        title: const Text(AppConstants.title),
+        backgroundColor: AndroidConstants.kDarkAppBarColor,
+        title: const Text(AndroidConstants.title),
         automaticallyImplyLeading: false,
         actions: [
           IconButton(
@@ -67,8 +67,8 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin{
           ),
         ],
         bottom: TabBar(
-          indicator: AppTheme.darkTabBarTheme.indicator,
-          labelColor: AppConstants.kFabColor,
+          indicator: AndroidTheme.darkTabBarTheme.indicator,
+          labelColor: AndroidConstants.kFabColor,
           controller: _controller,
           tabs: tabs,
         ),
@@ -85,7 +85,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin{
     return _controller.index == 0 ?
     FloatingActionButton(
       onPressed: () {},
-      backgroundColor: AppConstants.kFabColor,
+      backgroundColor: AndroidConstants.kFabColor,
       child: const Icon(Icons.message_rounded),
     ) : _controller.index == 1 ?
     Column(
@@ -97,7 +97,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin{
           child: FloatingActionButton(
               shape: const StadiumBorder(),
               onPressed: () {},
-              backgroundColor: AppConstants.kDarkAppBarColor,
+              backgroundColor: AndroidConstants.kDarkAppBarColor,
               child: const Icon(
                 Icons.edit,
                 size: 20.0,
@@ -110,7 +110,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin{
         FloatingActionButton(
             shape: const StadiumBorder(),
             onPressed: () {},
-            backgroundColor: AppConstants.kFabColor,
+            backgroundColor: AndroidConstants.kFabColor,
             child: const Icon(
               Icons.camera_alt,
               size: 20.0,
@@ -121,7 +121,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin{
      :
     FloatingActionButton(
       onPressed: (){},
-      backgroundColor: AppConstants.kFabColor,
+      backgroundColor: AndroidConstants.kFabColor,
       child: const Icon(Icons.add_call),
     );
   }
