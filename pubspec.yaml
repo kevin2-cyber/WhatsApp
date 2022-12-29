@@ -19,6 +19,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   google_fonts: ^3.0.1
   tabler_icons: ^0.0.3
+  shrine_images: ^2.0.2
 
 dev_dependencies:
   flutter_test:
@@ -36,7 +37,7 @@ flutter:
 
   assets:
     - assets/images/
-    - assets/icons/
+
 
 
   fonts:

@@ -2,70 +2,70 @@ import 'package:flutter/material.dart';
 
 import 'constants.dart';
 
-class AppTheme {
+class AndroidTheme {
   // dark text theme
   static TextTheme darkTextTheme = const TextTheme(
     bodyLarge: TextStyle(
-        fontFamily: AppConstants.kFont,
+        fontFamily: AndroidConstants.kFont,
         fontSize: 14,
         fontWeight: FontWeight.w700,
-        color: AppConstants.kDarkTextThemeColor),
+        color: AndroidConstants.kDarkTextThemeColor),
     displayLarge: TextStyle(
-      fontFamily: AppConstants.kFont,
+      fontFamily: AndroidConstants.kFont,
       fontSize: 32,
       fontWeight: FontWeight.bold,
-      color: AppConstants.kDarkTextThemeColor,
+      color: AndroidConstants.kDarkTextThemeColor,
     ),
     displayMedium: TextStyle(
-      fontFamily: AppConstants.kFont,
+      fontFamily: AndroidConstants.kFont,
       fontSize: 21,
       fontWeight: FontWeight.w700,
-      color: AppConstants.kDarkTextThemeColor,
+      color: AndroidConstants.kDarkTextThemeColor,
     ),
     displaySmall: TextStyle(
-      fontFamily: AppConstants.kFont,
+      fontFamily: AndroidConstants.kFont,
       fontSize: 16,
       fontWeight: FontWeight.w600,
-      color: AppConstants.kDarkTextThemeColor,
+      color: AndroidConstants.kDarkTextThemeColor,
     ),
     titleLarge: TextStyle(
-      fontFamily: AppConstants.kFont,
+      fontFamily: AndroidConstants.kFont,
       fontSize: 20,
       fontWeight: FontWeight.w600,
-      color: AppConstants.kDarkTextThemeColor,
+      color: AndroidConstants.kDarkTextThemeColor,
     ),
   );
 
   // light text theme
   static TextTheme lightTextTheme = const TextTheme(
     bodyLarge: TextStyle(
-        fontFamily: AppConstants.kFont,
+        fontFamily: AndroidConstants.kFont,
         fontSize: 14,
         fontWeight: FontWeight.w700,
-        color: AppConstants.kLightTextThemeColor),
+        color: AndroidConstants.kLightTextThemeColor),
     displayLarge: TextStyle(
-      fontFamily: AppConstants.kFont,
+      fontFamily: AndroidConstants.kFont,
       fontSize: 32,
       fontWeight: FontWeight.bold,
-      color: AppConstants.kLightTextThemeColor,
+      color: AndroidConstants.kLightTextThemeColor,
     ),
     displayMedium: TextStyle(
-      fontFamily: AppConstants.kFont,
+      fontFamily: AndroidConstants.kFont,
       fontSize: 21,
       fontWeight: FontWeight.w700,
-      color: AppConstants.kLightTextThemeColor,
+      color: AndroidConstants.kLightTextThemeColor,
     ),
     displaySmall: TextStyle(
-      fontFamily: AppConstants.kFont,
+      fontFamily: AndroidConstants.kFont,
       fontSize: 16,
       fontWeight: FontWeight.w600,
-      color: AppConstants.kLightTextThemeColor,
+      color: AndroidConstants.kLightTextThemeColor,
     ),
     titleLarge: TextStyle(
-      fontFamily: AppConstants.kFont,
+      fontFamily: AndroidConstants.kFont,
       fontSize: 20,
       fontWeight: FontWeight.w600,
-      color: AppConstants.kLightTextThemeColor,
+      color: AndroidConstants.kLightTextThemeColor,
     ),
   );
 
@@ -75,13 +75,13 @@ class AppTheme {
       color: Colors.transparent,
       border: Border(
         bottom: BorderSide(
-          color: AppConstants.kFabColor,
+          color: AndroidConstants.kFabColor,
           width: 3,
         ),
       ),
     ),
-    labelColor: AppConstants.kFabColor,
-    unselectedLabelColor: AppConstants.kLightTextThemeColor,
+    labelColor: AndroidConstants.kFabColor,
+    unselectedLabelColor: AndroidConstants.kLightTextThemeColor,
   );
 
   // light tab bar theme
@@ -96,19 +96,19 @@ class AppTheme {
       ),
     ),
     labelColor: Colors.white,
-    unselectedLabelColor: AppConstants.kLightTextThemeColor,
+    unselectedLabelColor: AndroidConstants.kLightTextThemeColor,
   );
 
   // light theme
   static final lightTheme = ThemeData(
-    scaffoldBackgroundColor: AppConstants.kLightThemeColor,
+    scaffoldBackgroundColor: AndroidConstants.kLightThemeColor,
     visualDensity: VisualDensity.adaptivePlatformDensity,
     tabBarTheme: lightTabBarTheme,
   );
 
   // dark theme
   static final darkTheme = ThemeData(
-    scaffoldBackgroundColor: AppConstants.kDarkThemeColor,
+    scaffoldBackgroundColor: AndroidConstants.kDarkThemeColor,
     visualDensity: VisualDensity.adaptivePlatformDensity,
     tabBarTheme: darkTabBarTheme,
   );
