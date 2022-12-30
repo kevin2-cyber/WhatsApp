@@ -49,7 +49,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: AndroidConstants.kDarkAppBarColor,
+        backgroundColor: AndroidConstants.kLightAppBarColor,
         title: const Text(AndroidConstants.title),
         automaticallyImplyLeading: false,
         actions: [
