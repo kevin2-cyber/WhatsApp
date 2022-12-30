@@ -12,66 +12,66 @@ class MaterialTheme {
   // dark text theme
   static TextTheme darkTextTheme = const TextTheme(
     bodyLarge: TextStyle(
-        fontFamily: AndroidConstants.kFont,
+        fontFamily: MaterialConstants.kFont,
         fontSize: 14,
         fontWeight: FontWeight.w700,
-        color: AndroidConstants.kDarkTextThemeColor),
+        color: MaterialConstants.kDarkTextThemeColor),
     displayLarge: TextStyle(
-      fontFamily: AndroidConstants.kFont,
+      fontFamily: MaterialConstants.kFont,
       fontSize: 32,
       fontWeight: FontWeight.bold,
-      color: AndroidConstants.kDarkTextThemeColor,
+      color: MaterialConstants.kDarkTextThemeColor,
     ),
     displayMedium: TextStyle(
-      fontFamily: AndroidConstants.kFont,
+      fontFamily: MaterialConstants.kFont,
       fontSize: 21,
       fontWeight: FontWeight.w700,
-      color: AndroidConstants.kDarkTextThemeColor,
+      color: MaterialConstants.kDarkTextThemeColor,
     ),
     displaySmall: TextStyle(
-      fontFamily: AndroidConstants.kFont,
+      fontFamily: MaterialConstants.kFont,
       fontSize: 16,
       fontWeight: FontWeight.w600,
-      color: AndroidConstants.kDarkTextThemeColor,
+      color: MaterialConstants.kDarkTextThemeColor,
     ),
     titleLarge: TextStyle(
-      fontFamily: AndroidConstants.kFont,
+      fontFamily: MaterialConstants.kFont,
       fontSize: 20,
       fontWeight: FontWeight.w600,
-      color: AndroidConstants.kDarkTextThemeColor,
+      color: MaterialConstants.kDarkTextThemeColor,
     ),
   );
 
   // light text theme
   static TextTheme lightTextTheme = const TextTheme(
     bodyLarge: TextStyle(
-        fontFamily: AndroidConstants.kFont,
+        fontFamily: MaterialConstants.kFont,
         fontSize: 14,
         fontWeight: FontWeight.w700,
-        color: AndroidConstants.kLightTextThemeColor),
+        color: MaterialConstants.kLightTextThemeColor),
     displayLarge: TextStyle(
-      fontFamily: AndroidConstants.kFont,
+      fontFamily: MaterialConstants.kFont,
       fontSize: 32,
       fontWeight: FontWeight.bold,
-      color: AndroidConstants.kLightTextThemeColor,
+      color: MaterialConstants.kLightTextThemeColor,
     ),
     displayMedium: TextStyle(
-      fontFamily: AndroidConstants.kFont,
+      fontFamily: MaterialConstants.kFont,
       fontSize: 21,
       fontWeight: FontWeight.w700,
-      color: AndroidConstants.kLightTextThemeColor,
+      color: MaterialConstants.kLightTextThemeColor,
     ),
     displaySmall: TextStyle(
-      fontFamily: AndroidConstants.kFont,
+      fontFamily: MaterialConstants.kFont,
       fontSize: 16,
       fontWeight: FontWeight.w600,
-      color: AndroidConstants.kLightTextThemeColor,
+      color: MaterialConstants.kLightTextThemeColor,
     ),
     titleLarge: TextStyle(
-      fontFamily: AndroidConstants.kFont,
+      fontFamily: MaterialConstants.kFont,
       fontSize: 20,
       fontWeight: FontWeight.w600,
-      color: AndroidConstants.kLightTextThemeColor,
+      color: MaterialConstants.kLightTextThemeColor,
     ),
   );
 
@@ -81,13 +81,13 @@ class MaterialTheme {
       color: Colors.transparent,
       border: Border(
         bottom: BorderSide(
-          color: AndroidConstants.kFabColor,
+          color: MaterialConstants.kFabColor,
           width: 3,
         ),
       ),
     ),
-    labelColor: AndroidConstants.kFabColor,
-    unselectedLabelColor: AndroidConstants.kLightTextThemeColor,
+    labelColor: MaterialConstants.kFabColor,
+    unselectedLabelColor: MaterialConstants.kLightTextThemeColor,
   );
 
   // light tab bar theme
@@ -102,19 +102,19 @@ class MaterialTheme {
       ),
     ),
     labelColor: Colors.white,
-    unselectedLabelColor: AndroidConstants.kLightTextThemeColor,
+    unselectedLabelColor: MaterialConstants.kLightTextThemeColor,
   );
 
   // light theme
   static final lightTheme = ThemeData(
-    scaffoldBackgroundColor: AndroidConstants.kLightThemeColor,
+    scaffoldBackgroundColor: MaterialConstants.kLightThemeColor,
     visualDensity: VisualDensity.adaptivePlatformDensity,
     tabBarTheme: lightTabBarTheme,
   );
 
   // dark theme
   static final darkTheme = ThemeData(
-    scaffoldBackgroundColor: AndroidConstants.kDarkThemeColor,
+    scaffoldBackgroundColor: MaterialConstants.kDarkThemeColor,
     visualDensity: VisualDensity.adaptivePlatformDensity,
     tabBarTheme: darkTabBarTheme,
   );

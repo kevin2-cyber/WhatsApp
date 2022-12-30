@@ -12,7 +12,7 @@ class WhatsApp extends StatelessWidget {
     // if (Platform.isAndroid) {
       return MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: AndroidConstants.title,
+        title: MaterialConstants.title,
         // using the system theme for switching
         themeMode: ThemeMode.system,
         theme: MaterialTheme.main(),

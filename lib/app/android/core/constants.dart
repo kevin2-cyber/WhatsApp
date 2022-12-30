@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class AndroidConstants {
+class MaterialConstants {
 
   // colors
   static const kDarkAppBarColor = Color(0xFF1F2C34);
