@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/app/core/constants.dart';
-import 'package:whatsapp_clone/app/core/theme.dart';
 
+import 'android/core/constants.dart';
+import 'android/core/theme.dart';
 import 'android/presentation/home.dart';
 
 class WhatsApp extends StatelessWidget {
