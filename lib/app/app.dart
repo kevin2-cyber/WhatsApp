@@ -15,8 +15,7 @@ class WhatsApp extends StatelessWidget {
         title: AndroidConstants.title,
         // using the system theme for switching
         themeMode: ThemeMode.system,
-        theme: AndroidTheme.lightTheme,
-        darkTheme: AndroidTheme.darkTheme,
+        theme: AndroidTheme.main(),
         home: const DefaultTabController(
           length: 3,
           child: Home(),
