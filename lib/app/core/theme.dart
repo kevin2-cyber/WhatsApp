@@ -3,6 +3,12 @@ import 'package:flutter/material.dart';
 import 'constants.dart';
 
 class AndroidTheme {
+
+  // main theme
+  static ThemeData main({bool isDark = false}) {
+    return ThemeData();
+  }
+
   // dark text theme
   static TextTheme darkTextTheme = const TextTheme(
     bodyLarge: TextStyle(
