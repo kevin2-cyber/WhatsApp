@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'constants.dart';
 
-class AndroidTheme {
+class MaterialTheme {
 
   // main theme
   static ThemeData main({bool isDark = false}) {

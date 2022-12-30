@@ -67,7 +67,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin{
           ),
         ],
         bottom: TabBar(
-          indicator: AndroidTheme.darkTabBarTheme.indicator,
+          indicator: MaterialTheme.darkTabBarTheme.indicator,
           labelColor: AndroidConstants.kFabColor,
           controller: _controller,
           tabs: tabs,
