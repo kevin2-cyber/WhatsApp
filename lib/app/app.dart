@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/app/core/constants.dart';
-import 'package:whatsapp_clone/app/core/theme.dart';
 
+import 'android/core/constants.dart';
+import 'android/core/theme.dart';
 import 'android/presentation/home.dart';
 
 class WhatsApp extends StatelessWidget {
@@ -12,11 +12,10 @@ class WhatsApp extends StatelessWidget {
     // if (Platform.isAndroid) {
       return MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: AndroidConstants.title,
+        title: MaterialConstants.title,
         // using the system theme for switching
         themeMode: ThemeMode.system,
-        theme: AndroidTheme.lightTheme,
-        darkTheme: AndroidTheme.darkTheme,
+        theme: MaterialTheme.main(),
         home: const DefaultTabController(
           length: 3,
           child: Home(),
