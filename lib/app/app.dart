@@ -16,8 +16,8 @@ class WhatsApp extends StatelessWidget {
         // using the system theme for switching
         themeMode: ThemeMode.system,
         theme: MaterialTheme.main(),
-        home: const DefaultTabController(
-          length: 3,
+        home:  const DefaultTabController(
+          length: 4,
           child: Home(),
         ),
       );
