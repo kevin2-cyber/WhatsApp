@@ -96,7 +96,7 @@ class MaterialTheme {
       color: Colors.transparent,
       border: Border(
         bottom: BorderSide(
-          color: Colors.white,
+          color: MaterialConstants.kFabColor,
           width: 3,
         ),
       ),

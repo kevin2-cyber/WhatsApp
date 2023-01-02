@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'community/community.fragment.dart';
 import '../core/constants.dart';
 import '../core/theme.dart';
 import 'status/status.fragment.dart';
@@ -12,16 +13,45 @@ class Home extends StatefulWidget {
   State<Home> createState() => _HomeState();
 }
 
-class _HomeState extends State<Home> with SingleTickerProviderStateMixin{
+class _HomeState extends State<Home>
+    with SingleTickerProviderStateMixin{
   late  TabController _controller;
 
+  static const bool isSelected = false;
+
   static const List<Tab> tabs = [
-    Tab(text: 'Chat',),
-    Tab(text: 'Status'),
-    Tab(text: 'Calls'),
+    Tab(
+      icon: Icon(Icons.people),
+      iconMargin: EdgeInsets.all(5),
+    ),
+    Tab(
+      child: Text(
+          'Chats',
+        style: TextStyle(
+          color: isSelected ? Colors.white : MaterialConstants.kFabColor,
+        ),
+      ),
+    ),
+    Tab(
+      child: Text(
+          'Status',
+        style: TextStyle(
+          color: isSelected ? Colors.white : MaterialConstants.kFabColor,
+        ),
+      ),
+    ),
+    Tab(
+      child: Text(
+          'Calls',
+        style: TextStyle(
+          color: isSelected ? Colors.white : MaterialConstants.kFabColor,
+        ),
+      ),
+    ),
   ];
 
   static const List<Widget> myTabs = [
+    CommunityFragment(),
     ChatFragment(),
     StatusFragment(),
     CallFragment()
@@ -67,7 +97,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin{
           ),
         ],
         bottom: TabBar(
-          indicator: MaterialTheme.darkTabBarTheme.indicator,
+          indicator: MaterialTheme.lightTabBarTheme.indicator,
           labelColor: MaterialConstants.kFabColor,
           controller: _controller,
           tabs: tabs,
@@ -83,11 +113,13 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin{
 
   Widget _fab() {
     return _controller.index == 0 ?
+        Container() :
+      _controller.index == 1 ?
     FloatingActionButton(
       onPressed: () {},
       backgroundColor: MaterialConstants.kFabColor,
       child: const Icon(Icons.message_rounded),
-    ) : _controller.index == 1 ?
+    ) : _controller.index == 2 ?
     Column(
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
@@ -97,7 +129,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin{
           child: FloatingActionButton(
               shape: const StadiumBorder(),
               onPressed: () {},
-              backgroundColor: MaterialConstants.kDarkAppBarColor,
+              backgroundColor: MaterialConstants.kLightAppBarColor,
               child: const Icon(
                 Icons.edit,
                 size: 20.0,
