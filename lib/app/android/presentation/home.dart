@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'community/community.fragment.dart';
-import '../core/constants.dart';
-import '../core/theme.dart';
+import '../../core/constants.dart';
+import '../../core/theme.dart';
 import 'status/status.fragment.dart';
 import 'call/calls.fragment.dart';
 import 'chat/chat.fragment.dart';
@@ -13,45 +12,16 @@ class Home extends StatefulWidget {
   State<Home> createState() => _HomeState();
 }
 
-class _HomeState extends State<Home>
-    with SingleTickerProviderStateMixin{
+class _HomeState extends State<Home> with SingleTickerProviderStateMixin{
   late  TabController _controller;
 
-  static const bool isSelected = false;
-
   static const List<Tab> tabs = [
-    Tab(
-      icon: Icon(Icons.people),
-      iconMargin: EdgeInsets.all(5),
-    ),
-    Tab(
-      child: Text(
-          'Chats',
-        style: TextStyle(
-          color: isSelected ? Colors.white : MaterialConstants.kFabColor,
-        ),
-      ),
-    ),
-    Tab(
-      child: Text(
-          'Status',
-        style: TextStyle(
-          color: isSelected ? Colors.white : MaterialConstants.kFabColor,
-        ),
-      ),
-    ),
-    Tab(
-      child: Text(
-          'Calls',
-        style: TextStyle(
-          color: isSelected ? Colors.white : MaterialConstants.kFabColor,
-        ),
-      ),
-    ),
+    Tab(text: 'Chat',),
+    Tab(text: 'Status'),
+    Tab(text: 'Calls'),
   ];
 
   static const List<Widget> myTabs = [
-    CommunityFragment(),
     ChatFragment(),
     StatusFragment(),
     CallFragment()
@@ -79,8 +49,8 @@ class _HomeState extends State<Home>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: MaterialConstants.kLightAppBarColor,
-        title: const Text(MaterialConstants.title),
+        backgroundColor: AppConstants.kDarkAppBarColor,
+        title: const Text(AppConstants.title),
         automaticallyImplyLeading: false,
         actions: [
           IconButton(
@@ -97,8 +67,8 @@ class _HomeState extends State<Home>
           ),
         ],
         bottom: TabBar(
-          indicator: MaterialTheme.lightTabBarTheme.indicator,
-          labelColor: MaterialConstants.kFabColor,
+          indicator: AppTheme.darkTabBarTheme.indicator,
+          labelColor: AppConstants.kFabColor,
           controller: _controller,
           tabs: tabs,
         ),
@@ -113,13 +83,11 @@ class _HomeState extends State<Home>
 
   Widget _fab() {
     return _controller.index == 0 ?
-        Container() :
-      _controller.index == 1 ?
     FloatingActionButton(
       onPressed: () {},
-      backgroundColor: MaterialConstants.kFabColor,
+      backgroundColor: AppConstants.kFabColor,
       child: const Icon(Icons.message_rounded),
-    ) : _controller.index == 2 ?
+    ) : _controller.index == 1 ?
     Column(
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
@@ -129,7 +97,7 @@ class _HomeState extends State<Home>
           child: FloatingActionButton(
               shape: const StadiumBorder(),
               onPressed: () {},
-              backgroundColor: MaterialConstants.kLightAppBarColor,
+              backgroundColor: AppConstants.kDarkAppBarColor,
               child: const Icon(
                 Icons.edit,
                 size: 20.0,
@@ -142,7 +110,7 @@ class _HomeState extends State<Home>
         FloatingActionButton(
             shape: const StadiumBorder(),
             onPressed: () {},
-            backgroundColor: MaterialConstants.kFabColor,
+            backgroundColor: AppConstants.kFabColor,
             child: const Icon(
               Icons.camera_alt,
               size: 20.0,
@@ -153,7 +121,7 @@ class _HomeState extends State<Home>
      :
     FloatingActionButton(
       onPressed: (){},
-      backgroundColor: MaterialConstants.kFabColor,
+      backgroundColor: AppConstants.kFabColor,
       child: const Icon(Icons.add_call),
     );
   }
