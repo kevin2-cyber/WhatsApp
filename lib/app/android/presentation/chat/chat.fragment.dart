@@ -9,7 +9,7 @@ class ChatFragment extends StatelessWidget {
       padding: const EdgeInsets.all(4),
       child: ListView.separated(
         itemBuilder: (context,int index) => Row(),
-        separatorBuilder: (BuildContext context, int index) => const Divider(),
+        separatorBuilder: (context, int index) => const Divider(),
         itemCount: 3,
       ),
     );
